@@ -1,0 +1,70 @@
+
+body {
+    height: 500px;
+    width: 500px;
+}
+
+.container0 {
+    font-family: helvetica;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.container1{
+    border: 3px solid white;
+    padding: 20px;
+    width: 1535px;
+    background-color: grey;
+}
+
+.consent{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -ms-transform: translateY(-50%, -50%);
+    transform: translateY(-50%, -50%);
+}
+
+.financial{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%, -50%);
+    transform: translateY(-50%, -50%);
+}
+
+#msg {
+    font-family: monospace;
+}
+
+.light-theme {
+    color: #000000;
+    background: #4cb2b6;
+}
+.btn {
+    position: -ms-page;
+    top: 20px;
+    left: 250px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: black;
+    color: black;
+}
+
+.btn:focus { outline-style: var(--btnFontColor); }
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+  
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
