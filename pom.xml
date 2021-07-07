@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.docusign</groupId>
-    <artifactId>code-examples-java</artifactId>
+    <artifactId>MyMedicalRecords</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -24,10 +24,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

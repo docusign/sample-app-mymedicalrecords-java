@@ -30,7 +30,7 @@
 }
 
 .img0 {
-    
+    padding: 20px;
 }
 
 .consent{
@@ -55,7 +55,7 @@
 
 .light-theme {
     color: #000000;
-    background: #4cb2b6;
+    background: #89dfe2;
 }
 .btn1 {
     position: -ms-page;

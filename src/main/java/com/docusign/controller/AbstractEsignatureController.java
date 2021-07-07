@@ -1,14 +1,19 @@
+package com.docusign.controller;
+
 import com.docusign.DSConfiguration;
 import com.docusign.core.controller.AbstractController;
 import com.docusign.esign.api.AccountsApi;
 import com.docusign.esign.api.EnvelopesApi;
 import com.docusign.esign.client.ApiClient;
-
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 
+
+/**
+ * Abstract base class for all eSignature controllers.
+ */
 @Controller
-public class AbstractEsignatureController {
+public abstract class AbstractEsignatureController extends AbstractController {
 
     protected static final String MODEL_ENVELOPE_OK = "envelopeOk";
     private static final String EXAMPLE_PAGES_PATH = "pages/esignature/examples/";
@@ -56,5 +61,4 @@ public class AbstractEsignatureController {
         ApiClient apiClient = createApiClient(basePath, userAccessToken);
         return new AccountsApi(apiClient);
     }
-    
 }

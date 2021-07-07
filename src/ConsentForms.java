@@ -3,10 +3,11 @@ import java.util.Arrays;
 import java.io.IOException;
 import javax.servlet.http.HttpServletResponse;
 
-import com.docusign.common.WorkArguments;
-import MyMedicalRecords.ref.Session;
-import com.docusign.core.model.User;
 import com.docusign.DSConfiguration;
+import com.docusign.common.WorkArguments;
+import com.docusign.core.model.DoneExample;
+import com.docusign.core.model.Session;
+import com.docusign.core.model.User;
 import com.docusign.esign.model.EnvelopeDefinition;
 import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.RecipientAdditionalNotification;
@@ -15,9 +16,8 @@ import com.docusign.esign.model.CarbonCopy;
 import com.docusign.esign.model.Signer;
 import com.docusign.esign.api.EnvelopesApi;
 import com.docusign.esign.client.ApiException;
-import com.docusign.core.model.DoneExample;
 import com.docusign.esign.model.EnvelopeSummary;
-import com.docusign.DSConfiguration;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,10 +25,11 @@ import org.springframework.ui.ModelMap;
 
 
 @Controller
+@RequestMapping("ConsentForm")
 public class ConsentForms extends AbstractEsignatureController{
 
-    private static final String PDF_DOCUMENT_FILE_NAME = "ConsentForm.pdf";
-    private static final String PDF_DOCUMENT_NAME = "Consent To Treat";
+    private static final String PDF_DOCUMENT_FILE_NAME = "EMRConsentForm.pdf";
+    private static final String PDF_DOCUMENT_NAME = "Consent to Treat";
     private static final int ANCHOR_OFFSET_Y = 10;
     private static final int ANCHOR_OFFSET_X = 20;
 
@@ -68,8 +69,9 @@ public class ConsentForms extends AbstractEsignatureController{
     public static EnvelopeDefinition createEnvelope(WorkArguments args) throws IOException {
 
         Tabs signerTabs = EnvelopeHelpers.createSignerTabs(
-                EnvelopeHelpers.createSignHere("Patient Signature", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X),
-                EnvelopeHelpers.createSignHere("Patient Intials", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+                EnvelopeHelpers.createSignHere("*sn1*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X),
+                EnvelopeHelpers.createSignHere("*ds1*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X),
+                EnvelopeHelpers.createSignHere("*in1*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
 
 
         Signer signer = new Signer();
@@ -107,6 +109,7 @@ public class ConsentForms extends AbstractEsignatureController{
         envelope.setEmailSubject("Please sign this consent form");
         envelope.setDocuments(Arrays.asList(EnvelopeHelpers.createDocumentFromFile(PDF_DOCUMENT_FILE_NAME, PDF_DOCUMENT_NAME,"1")));
         envelope.setRecipients(EnvelopeHelpers.createRecipients(signer, cc));
+        
         // Request that the envelope be sent by setting |status| to "sent".
         // To request that the envelope be created as a draft, set to "created"
         envelope.setStatus(args.getStatus());
@@ -145,7 +148,4 @@ public class ConsentForms extends AbstractEsignatureController{
         return recipients;
     }
 
-    public void main(){
-
-    }
 }
