@@ -18,7 +18,6 @@ public class WorkArguments {
     private String signerName;
     private String ccEmail;
     private String ccName;
-    private String clickwrapName;
     private String signerEmail2;
     private String signerName2;
     private String ccEmail2;
@@ -43,8 +42,6 @@ public class WorkArguments {
     private String permissionProfileName;
     private String phoneNumber;
     private Integer roleId;
-    private String roomName;
-    private Integer roomTemplateId;
     private Integer roomId;
     private Integer officeId;
     private UUID formId;
