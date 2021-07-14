@@ -1,4 +1,5 @@
 
+
 import java.util.Arrays;
 import java.io.IOException;
 import javax.servlet.http.HttpServletResponse;
@@ -17,15 +18,17 @@ import com.docusign.esign.model.Signer;
 import com.docusign.esign.api.EnvelopesApi;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.model.EnvelopeSummary;
+import com.docusign.controller.EnvelopeHelpers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("ConsentForm")
+@RequestMapping("/ConsentForm")
 public class ConsentForms extends AbstractEsignatureController{
 
     private static final String PDF_DOCUMENT_FILE_NAME = "EMRConsentForm.pdf";
@@ -115,37 +118,6 @@ public class ConsentForms extends AbstractEsignatureController{
         envelope.setStatus(args.getStatus());
 
         return envelope;
-    }
-
-    public static final String ENVELOPE_STATUS_CREATED = "Created";
-    public static final String ENVELOPE_STATUS_SENT = "Sent";
-
-    public static Document createDocumentFromFile(String fileName, String docName, String docId) throws IOException {
-        byte[] buffer = readFile(fileName);
-        String extention = FilenameUtils.getExtension(fileName);
-        return createDocument(buffer, docName, extention, docId);
-    }
-    
-    static Tabs createSignerTabs(SignHere... signs) {
-        Tabs signerTabs = new Tabs();
-        signerTabs.setSignHereTabs(Arrays.asList(signs));
-        return signerTabs;
-    }
-    
-    static SignHere createSignHere(String anchorString, int yOffsetPixels, int xOffsetPixels) {
-        SignHere signHere = new SignHere();
-        signHere.setAnchorString(anchorString);
-        signHere.setAnchorUnits("pixels");
-        signHere.setAnchorYOffset(String.valueOf(yOffsetPixels));
-        signHere.setAnchorXOffset(String.valueOf(xOffsetPixels));
-        return signHere;
-    }
-    
-    static Recipients createRecipients(Signer signer, CarbonCopy cc) {
-        Recipients recipients = new Recipients();
-        recipients.setSigners(Arrays.asList(signer));
-        recipients.setCarbonCopies(Arrays.asList(cc));
-        return recipients;
     }
 
 }

@@ -34,7 +34,7 @@ public abstract class AbstractController {
     protected static final String BEARER_AUTHENTICATION = "Bearer ";
     protected static final String DONE_EXAMPLE_PAGE = "pages/example_done";
     protected static final String DONE_EXAMPLE_PAGE_COMPARE = "pages/example_done_compare";
-    protected static final String ERROR_PAGE = "error";
+    protected static final String ERROR_PAGE = "pages/error";
 
     @Autowired
     private OAuth2ClientContext oAuth2ClientContext;

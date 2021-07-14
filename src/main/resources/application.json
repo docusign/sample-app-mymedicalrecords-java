@@ -2,7 +2,7 @@
   "quickstart" :"false",
   "DS_SIGNER_NAME": "Izzy Wu",
   "DS_SIGNER_EMAIL": "Izzy.Wu@docusign.com",
-  "DS_APP_URL": "http://localhost:8000",
+  "DS_APP_URL": "http://localhost:8080",
   "DS_TARGET_ACCOUNT_ID": "ff8f120d-cf17-4516-b86c-92dd6e78de0b",
   "DS_API_NAME": "ESIGNATURE",
   "DS_BASE_PATH": "https://demo.docusign.net",
