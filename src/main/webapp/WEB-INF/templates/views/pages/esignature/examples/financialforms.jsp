@@ -1,10 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="../../../partials/head.jsp"/>
 
-<h4>1. Embedded Signing</h4>
-<p>This example sends an envelope, and then uses Embedded signing for the first signer.</p>
-<p>Embedded signing provides a smoother user experience for the signer: DocuSign signing is initiated from
-    your website.</p>
+<h4>Form for Financial Responsibility</h4>
+<p>Please fill out the name and email below that you want to receive this form. Thank you. </p>
 <c:if test="${showDoc}">
     <p><a target='_blank' href='${documentation}'>Documentation</a> about this example.</p>
 </c:if>

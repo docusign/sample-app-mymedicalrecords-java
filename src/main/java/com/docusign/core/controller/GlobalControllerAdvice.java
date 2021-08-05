@@ -80,10 +80,10 @@ public class GlobalControllerAdvice {
         return new ArrayList<>();
     }
 
-    @ModelAttribute("showDoc")
-    public boolean populateShowDoc() {
-        return StringUtils.isNotBlank(config.getDocumentationPath());
-    }
+    //@ModelAttribute("showDoc")
+   // public boolean populateShowDoc() {
+       // return StringUtils.isNotBlank(config.getDocumentationPath());
+    //}
 
     @ModelAttribute("locals")
     public Locals populateLocals() {

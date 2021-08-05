@@ -102,7 +102,7 @@ public abstract class AbstractController {
         model.addAttribute("title", title);
         model.addAttribute("sourceFile", clazz.getSimpleName() + ".java");
         model.addAttribute("sourceUrl", srcPath);
-        model.addAttribute("documentation", config.getDocumentationPath() + exampleName);
+        //model.addAttribute("documentation", config.getDocumentationPath() + exampleName);
     }
 
     /**

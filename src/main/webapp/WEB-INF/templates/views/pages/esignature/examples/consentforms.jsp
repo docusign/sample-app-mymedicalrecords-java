@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="../../../partials/head.jsp"/>
 
-<h4>2. Send an envelope via SMS delivery</h4>
-<p>The envelope includes a pdf, Word, and HTML document. Anchor text
+<h4>Form to Consent</h4>
+<p>The envelope includes a PDF document. Anchor text
     (<a href="https://support.docusign.com/en/guides/AutoPlace-New-DocuSign-Experience">AutoPlace</a>)
     is used to position the signing fields in the documents.
 </p>
