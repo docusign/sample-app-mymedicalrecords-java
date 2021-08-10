@@ -80,17 +80,17 @@ public class GlobalControllerAdvice {
         return new ArrayList<>();
     }
 
-    @ModelAttribute("showDoc")
-    public boolean populateShowDoc() {
-        return StringUtils.isNotBlank(config.getDocumentationPath());
-    }
+    //@ModelAttribute("showDoc")
+   // public boolean populateShowDoc() {
+       // return StringUtils.isNotBlank(config.getDocumentationPath());
+    //}
 
     @ModelAttribute("locals")
     public Locals populateLocals() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        //ApiIndex apiIndex = ApiIndex.valueOf(config.getApiName());
-        //session.setApiIndexPath(apiIndex.toString());
+        ApiIndex apiIndex = ApiIndex.valueOf(config.getApiName());
+        session.setApiIndexPath(apiIndex.toString());
 
         if (!(authentication instanceof OAuth2Authentication)) {
             return new Locals(config, session, null, "");
@@ -112,13 +112,24 @@ public class GlobalControllerAdvice {
             session.setAccountId(oauthAccount.getAccountId());
             session.setAccountName(oauthAccount.getAccountName());
             //TODO set this more efficiently with more APIs as they're added in
-            //String basePath = this.getBaseUrl(apiIndex, oauthAccount) + apiIndex.getBaseUrlSuffix();
-            //session.setBasePath(basePath);
+            String basePath = this.getBaseUrl(apiIndex, oauthAccount) + apiIndex.getBaseUrlSuffix();
+            session.setBasePath(basePath);
         }
 
         return new Locals(config, session, user, "");
     }
 
+    private String getBaseUrl(ApiIndex apiIndex, OAuth.Account oauthAccount) {
+        if (apiIndex.equals(ApiIndex.ROOMS)) {
+            return this.config.getRoomsBasePath();
+        } else if (apiIndex.equals(ApiIndex.CLICK)) {
+            return this.config.getClickBasePath();
+        }  else if (apiIndex.equals(ApiIndex.MONITOR)) {
+            return this.config.getMonitorBasePath();
+        } else {
+            return oauthAccount.getBaseUri();
+        }
+    }
 
     @SuppressWarnings("unchecked")
     private static List<OAuth.Account> getOAuthAccounts(OAuth2Authentication oauth) {

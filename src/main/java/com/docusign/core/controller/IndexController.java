@@ -16,12 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
-import org.springframework.web.bind.annotation.RestController; 
-import org.springframework.web.bind.annotation.GetMapping; 
-import org.springframework.boot.web.servlet.error.ErrorController; 
 
-@RestController
-public class IndexController implements ErrorController{
+@Controller
+public class IndexController {
     private static final String ATTR_ENVELOPE_ID = "qpEnvelopeId";
     private static final String ATTR_STATE = "state";
     private static final String ATTR_EVENT = "event";
@@ -39,24 +36,16 @@ public class IndexController implements ErrorController{
     @Autowired
     private DSConfiguration config;
 
-    ///@GetMapping(path = "/")
-    //public String index(ModelMap model) {
-     //   model.addAttribute(ATTR_TITLE,"Home");
-     //   return session.getApiIndexPath();
-    //}
+    @GetMapping(path = "/")
+    public String index(ModelMap model) {
+        model.addAttribute(ATTR_TITLE,"Home");
+        return session.getApiIndexPath();
+    }
 
     @GetMapping(path = "/ds/mustAuthenticate")
     public ModelAndView mustAuthenticateController(ModelMap model) {
-        model.addAttribute(ATTR_TITLE, "Authenticate with DocuSign");
-        if (session.isRefreshToken() || config.getQuickstart().equals("true")) {
-            return new ModelAndView(getRedirectView(session.getAuthTypeSelected()));
-        }
-        //else if (config.getApiName().equals("MONITOR")) {
-        //    return new ModelAndView(getRedirectView(AuthType.JWT));
-        //}
-        else {
-            return new ModelAndView("pages/ds_must_authenticate");
-        }
+        //model.addAttribute(ATTR_TITLE, "Authenticate with DocuSign");
+        return new ModelAndView(getRedirectView(AuthType.JWT));
     }
 
     @RequestMapping(path = "/ds/authenticate", method = RequestMethod.POST)
@@ -68,6 +57,12 @@ public class IndexController implements ErrorController{
         List<String> selectAuthTypeObject = formParams.get("selectAuthType");
         AuthType authTypeSelected = AuthType.valueOf(selectAuthTypeObject.get(0));
         return getRedirectView(authTypeSelected);
+    }
+
+    @GetMapping(path = "/patientdocs")
+    public ModelAndView returnPatientDocs(ModelMap model){
+         return new ModelAndView("/pages/esignature/examples/patientdocs");
+
     }
 
     @GetMapping(path = "/ds-return")
@@ -95,16 +90,4 @@ public class IndexController implements ErrorController{
         }
         return oAuth2SsoProperties.getLoginPath();
     }
-
-    @GetMapping("/error")
-	public String customError() {
-		return "The link you followed may be broken, or the page may have been removed.";
-	}
-
-	@Override
-	public String getErrorPath() {
-		return "/error";
-	}
-
-    
 }

@@ -83,29 +83,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         registration.setOrder(-100);
         return registration;
     }
-    /*
-    private List<String> getScopes() {
-        List<String> scopes = null;
-        if (this.dsConfiguration.getApiName().equalsIgnoreCase("rooms")) {
-            scopes = Arrays.asList(this.roomScopes);
-        } else if (this.dsConfiguration.getApiName().equalsIgnoreCase("click")) {
-            scopes = Arrays.asList(this.clickScopes);
-        } else if (this.dsConfiguration.getApiName().equalsIgnoreCase("monitor")) {
-            scopes = Arrays.asList(this.monitorScopes);
-        }
 
-        return scopes;
-    }
-    */
     private OAuth2ClientAuthenticationProcessingFilter authCodeGrantFilter() {
         OAuth2SsoProperties authCodeGrantSso = authCodeGrantSso();
         AuthorizationCodeResourceDetails authCodeGrantClient = authCodeGrantClient();
-    	/*
-        List<String> scopes = this.getScopes();
-        if (scopes != null) {
-            authCodeGrantClient.setScope(scopes);
-        }
-        */
+    	
+
         ResourceServerProperties userInfoResource = userInfoResource();
         OAuth2ClientAuthenticationProcessingFilter filter =
             new OAuth2ClientAuthenticationProcessingFilter(authCodeGrantSso.getLoginPath());
@@ -120,12 +103,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private OAuth2ClientAuthenticationProcessingFilter jwtGrantFilter() {
         OAuth2SsoProperties authCodeGrantSso = jwtGrantSso();
         JWTAuthorizationCodeResourceDetails jwtCodeGrantClient = jwtCodeGrantClient();
-        /*
-        List<String> scopes = this.getScopes();
-        if (scopes != null) {
-            jwtCodeGrantClient.setScope(scopes);
-        }
-        */
         OAuth2ClientAuthenticationProcessingFilter filter =
             new OAuth2ClientAuthenticationProcessingFilter(authCodeGrantSso.getLoginPath());
         OAuth2RestTemplate restTemplate = new JWTOAuth2RestTemplate(jwtCodeGrantClient, oAuth2ClientContext);

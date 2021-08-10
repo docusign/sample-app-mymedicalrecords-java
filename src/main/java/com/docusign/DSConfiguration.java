@@ -9,43 +9,50 @@ import org.springframework.stereotype.Component;
 @Getter
 public class DSConfiguration {
 
-    @Value( "https://github.com/docusign/code-examples-java/blob/master/src/main/java/")
+    @Value("${com.docusign.github.example-uri}")
     private String exampleUrl;
 
-    @Value("")
+    @Value("${com.docusign.documentation-path}")
     private String documentationPath;
 
-    @Value("d44f543f-5156-465c-923c-ebc10092078d")
+    @Value("${DS_TARGET_ACCOUNT_ID}")
     private String targetAccountId;
 
-    @Value("http://localhost:8080")
+    @Value("${DS_APP_URL}")
     private String appUrl;
 
-    @Value("ESIGNATURE")
+    @Value("${DS_API_NAME}")
     private String apiName;
 
-    @Value("https://demo.docusign.net")
+    @Value("${DS_BASE_PATH}")
     private String basePath;
     
+    @Value("${DS_ROOMS_BASE_PATH}")
+    private String roomsBasePath;
 
-    @Value("Izzy.Wu@docusign.com")
+    @Value("${DS_CLICK_BASE_PATH}")
+    private String clickBasePath;
+
+    @Value("${DS_SIGNER_EMAIL:{USER_EMAIL}}")
     private String signerEmail;
 
-    @Value("Izzy Wu")
+    @Value("${DS_SIGNER_NAME:{USER_NAME}}")
     private String signerName;
 
-    @Value("{GATEWAY_ACCOUNT_ID}")
+    @Value("${Gateway_Account_Id}")
     private String gatewayAccountId;
 
-    @Value("{DS_PAYMENT_GATEWAY_NAME}")
+    @Value("${Gateway_Name}")
     private String gatewayName;
 
-    @Value("{DS_PAYMENT_GATEWAY_DISPLAY_NAME}")
+    @Value("${Gateway_Display_Name}")
     private String gatewayDisplayName;
 
-    @Value("false")
+    @Value("${quickstart:{quickstart}}")
     private String quickstart;
 
+    @Value("${DS_MONITOR_BASE_PATH}")
+    private String monitorBasePath;
 
     public String getDsReturnUrl() {
         return appUrl + "/ds-return";

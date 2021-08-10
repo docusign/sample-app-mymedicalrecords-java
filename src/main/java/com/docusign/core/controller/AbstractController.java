@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -34,7 +36,8 @@ public abstract class AbstractController {
     protected static final String BEARER_AUTHENTICATION = "Bearer ";
     protected static final String DONE_EXAMPLE_PAGE = "pages/example_done";
     protected static final String DONE_EXAMPLE_PAGE_COMPARE = "pages/example_done_compare";
-    protected static final String ERROR_PAGE = "pages/error";
+    protected static final String ERROR_PAGE = "error";
+    private static final Logger logger = LoggerFactory.getLogger(AbstractController.class);
 
     @Autowired
     private OAuth2ClientContext oAuth2ClientContext;
@@ -66,6 +69,7 @@ public abstract class AbstractController {
             onInitModel(args, model);
             return pagePath;
         } catch (Exception exception) {
+            
             return handleException(exception, model);
         }
     }
@@ -98,7 +102,7 @@ public abstract class AbstractController {
         model.addAttribute("title", title);
         model.addAttribute("sourceFile", clazz.getSimpleName() + ".java");
         model.addAttribute("sourceUrl", srcPath);
-        model.addAttribute("documentation", config.getDocumentationPath() + exampleName);
+        //model.addAttribute("documentation", config.getDocumentationPath() + exampleName);
     }
 
     /**
@@ -116,6 +120,7 @@ public abstract class AbstractController {
         HttpServletResponse response) throws Exception;
 
     private String handleException(Exception exception, ModelMap model) {
+        logger.info("Problem: " + exception.toString());
         new DoneExample()
             .withTitle(exampleName)
             .withName(title)
