@@ -1,22 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="../../../partials/head.jsp"/>
 
-<h4>Form to Consent</h4>
-<p>The envelope includes a PDF document. Anchor text
-    (<a href="https://support.docusign.com/en/guides/AutoPlace-New-DocuSign-Experience">AutoPlace</a>)
-    is used to position the signing fields in the documents.
-</p>
-<p>This is a general example of creating and sending an envelope (a signing request) to a recipient and notifying that recipient with an SMS message..</p>
-<c:if test="${showDoc}">
-    <p><a target='_blank' href='${documentation}'>Documentation</a> about this example.</p>
-</c:if>
-
-<p>API method used:
+<h4 style = "color: white;">Form to Consent</h4>
+<p style = "color: white;">Please fill out the information below to recieve the consent form. Thank you!</p>
+<p style = "color: white;">API method used:
     <a target='_blank' rel="noopener noreferrer" href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
-</p>
-
-<p>
-    View source file <a target="_blank" href="${sourceUrl}">${sourceFile}</a> on GitHub.
 </p>
 
 <form class="eg" action="" method="post" data-busy="form">

@@ -5,9 +5,8 @@
   <!-- IF not signed in -->
 </c:if>
 
-<div class = "topref" style = "position: absolute; width: 100%; height: 115px; left: 0px;  top: 0px; background: #003368;">
-
-</div>
+<div class = "logobox" style = "display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px 5px;
+  position: absolute; width: 67px; height: 70px; left: 26px; top: 23px;  background: #002348;"></div>
 
 <div class="container" style="margin-top: 60px; width: 100%;" id="index-page">
   <div class = "logo" style = "position: absolute; width: 505px; height: 372px; left: 170px; top: 192px; border-radius: 7px;">
@@ -20,25 +19,35 @@
 
   <div class = "emr" style = "position: absolute; width: 465px; height: 276px; left: 177px; top: 516px; background: #001730;
     border-radius: 7px;">
-    <p style = "position: absolute; width: 174px; height: 29px; left: 236px; top: 555px; font-family: Montserrat; font-style: normal;
+
+    <p style = "position: absolute; text-align: left; width: 174px; height: 29px; left: 59px; top: 39px; font-family: Montserrat; font-style: normal;
       font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9; z-index: 2;"> MyMedicalRecords </p>
 
-    <p style = "position: absolute; width: 376px; height: 178px; left: 236px; top: 608px; font-family: Roboto; font-style: normal;
+    <p style = "position: absolute; text-align: left; width: 376px; height: 178px; left: 59px; top: 92px; font-family: Roboto; font-style: normal;
       font-weight: normal; font-size: 18px; line-height: 21px; color: #F9F9F9; z-index: 2;">
       Welcome to MyMedicalRecords, a self-service portal for EMRs</p>
+
   </div>
 
-</div>
+  <div class = "githubsrc" style = "position: absolute; width: 529px; height: 192px; left: 735px; top: 420px;  background: #024081;
+    border-radius: 7px;">
 
-<div class = "bottomref" style ="position: absolute; width: 100%; height: 312px; left: -1px; top: 900px;background: #001730;">
-  <p style= "position: absolute; width: 433px; height: 29px; left: 504px; top: 957px; font-family: Montserrat; font-style: normal;
-    font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9; z-index: 2;"> DocuSign: It’s time to agree better</p>
+    <div class = "gitlogo" style = "position: absolute; width: 28px; height: 27px; left: 25px; top: 49px;">
+      <img src= "/assets/Path.png"/>
+    </div>
 
-  <p style = "position: absolute; width: 744px; height: 42px; left: 347px; top: 1002px; font-family: Roboto; font-style: normal;
-    font-weight: normal; font-size: 18px; line-height: 21px; text-align: center; color: #F9F9F9; z-index: 2;">
-    Docusign helps organizations connect and automate how they prepare, sign, act on and manage agreements
-  </p>
-</div>
+    <a href = "https://github.com/docusign/sample-app-mymedicalrecords-java" style = "position: absolute; width: 183px; height: 29px; left: 78px; top: 49px;  font-family: Montserrat; font-style: normal;
+      font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9;">Github Source</a>
+
+    <a href = "https://github.com/docusign/sample-app-mymedicalrecords-java" style = "position: absolute; width: 343px; height: 42px; left: 78px; top: 93px; font-family: Roboto; font-style: normal;
+      font-weight: normal; font-size: 18px; line-height: 21px; color: #F9F9F9;">Take a look at the source code for MyMedicalRecords</a>
+
+    <div class = "arrow" style = "position: absolute; left: 459px; top: 93px">
+      <img src = "/assets/Icon Color.png"/>
+    </div>
+    
+  </div>
+
 
 <!-- anchor-js is only for the index page -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>

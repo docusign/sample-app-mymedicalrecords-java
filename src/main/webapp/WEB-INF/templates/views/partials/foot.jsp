@@ -1,4 +1,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<div class = "footer" style ="position: absolute; width: 100%; height: 312px; top: 900px; left: -1px; background: #001730;">
+
+        <p style= " position: absolute; width: 433px; height: 29px; left: 605px; top: 57px; font-family: Roboto; 
+          font-style: normal; font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9; z-index: 2;">
+          DocuSign: It is time to agree better</p>
+          
+        <p style = "position: absolute; width: 744px; height: 42px; left: 408px; top: 102px; font-family: Roboto; font-style: normal;
+            font-weight: normal; font-size: 18px; line-height: 21px; text-align: center; color: #F9F9F9; z-index: 2;">
+              Docusign helps organizations connect and automate how they prepare, sign, act on and manage agreements
+        </p>
+    
+        <a href ="https://developers.docusign.com/" style = "position: absolute; width: 234px; height: 20px; left: 665px; top: 206px; font-family: Roboto;
+          font-style: normal; font-weight: 500; font-size: 20px; line-height: 20px; display: flex; align-items: center; text-align: center;
+          color: #2EF69B;">Create Docusign Developer Account</a>
+    
+</div>
 </content>
 </div>
 <!-- The opening div for the container is in head.ejs -->
@@ -30,6 +47,8 @@
             ${locals}
   </pre>
 </c:if>
+
+
 
 <!-- Data from the server -->
 <div id="server_data" data-server-data='{"flash": "${locals.messages}"}'
