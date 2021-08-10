@@ -15,32 +15,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="/assets/css.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand"  target="_blank" href="https://developers.docusign.com">DocuSign Developer</a>
+<body style = "background-color: #002348;">
+<nav class="navbar navbar-expand-md fixed-top" style = "border-color: #003368;">
+    <a class="navbar-brand"  target="_blank" style = "background-color: #002348; color:#33D69D;" >EMR</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" >
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault" style = "background-color: #003368;">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/" style = "color: white;">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class = "nav-item">
+                <a class="nav-link" href="patientdocs" style = "color: white;">Patient Documents<span class="sr-only">(current)</span></a>
             </li>
             <c:choose>
                 <c:when test="${locals.user != null}">
                     <li>
-                        <a class="nav-link" href="/logout" id="logout"
+                        <a class="nav-link" href="/logout" id="logout" style = "color: white;"
                            data-busy="href">Logout <span class="sr-only">(current)</span></a>
                     </li>
                 </c:when>
                 <c:otherwise>
                     <li>
-                        <a class="nav-link" href="/ds/mustAuthenticate" id="login"
+                        <a class="nav-link" href="/ds/mustAuthenticate" id="login" style = "color: white;"
                            data-busy="href">Login <span class="sr-only">(current)</span></a>
                     </li>
                 </c:otherwise>
@@ -75,8 +78,6 @@
             <div class="rect5"></div>
         </div>
     </section>
-
-    <p id="download-continue" class="feedback"><a href="/">Continue</a></p>
 
     <c:choose>
         <c:when test="${locals.user == null}">

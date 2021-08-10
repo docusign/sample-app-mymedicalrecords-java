@@ -59,6 +59,12 @@ public class IndexController {
         return getRedirectView(authTypeSelected);
     }
 
+    @GetMapping(path = "/patientdocs")
+    public ModelAndView returnPatientDocs(ModelMap model){
+         return new ModelAndView("/pages/esignature/examples/patientdocs");
+
+    }
+
     @GetMapping(path = "/ds-return")
     public String returnController(@RequestParam(value = ATTR_STATE, required = false) String state,
             @RequestParam(value = ATTR_EVENT, required = false) String event,
