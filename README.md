@@ -1,4 +1,4 @@
-# Java Launcher Code Examples
+# sample-app-mymedicalrecords-java
 
 ### GitHub repo: [code-examples-java](./README.md)
 
