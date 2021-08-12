@@ -51,8 +51,13 @@
     <p style = "position: absolute; width: 191px; height: 29px; left: 60px; top: 63px; font-family: Montserrat; font-style: normal;
         font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9;">Consent Forms</p>
     
-    <p style = "position: absolute; width: 412px; height: 63px; left: 60px; top: 108px; font-family: Roboto; font-style: normal;
-        font-weight: normal; font-size: 18px; line-height: 21px; color: #D9D9D9;">Form for Medical Consent</p>
+    <pre style = "position: absolute; width: 412px; height: 110px; left: 60px; top: 108px; font-family: Roboto; font-style: normal;
+        font-weight: normal; font-size: 18px; line-height: 21px; color: #D9D9D9;">
+        Give consent to the use of telemedicine for 
+            medical care
+        Docusign Features Used: Responsive Signing 
+            (SMS Delivery), Templates
+    </pre>
 
     <div class = "startbox1" style = "display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 41px;
         position: absolute; width: 218px; height: 58px; left: 60px; top: 216px; background: #33D69D; border-radius: 2px;">
@@ -69,13 +74,18 @@
     border-radius: 7px;">
 
     <p style = "position: absolute; width: 191px; height: 29px; left: 60px; top: 63px; font-family: Montserrat; font-style: normal;
-    font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9;">Financial Forms</p>
+        font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9;">Financial Forms</p>
 
-    <p style = "position: absolute; width: 412px; height: 63px; left: 60px; top: 108px; font-family: Roboto; font-style: normal;
-    font-weight: normal; font-size: 18px; line-height: 21px; color: #D9D9D9;">Form for Medical Finances</p>
+    <pre style = "position: absolute; width: 412px; height: 110px; left: 60px; top: 108px; font-family: Roboto; font-style: normal;
+        font-weight: normal; font-size: 18px; line-height: 21px; color: #D9D9D9;">
+        Take financial responsibility for any costs 
+            and medical services given
+        DocuSign Features Used: Embedded Signing 
+            (recipient view), Templates
+    </pre>
 
     <div class = "startbox1" style = "display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px 41px;
-    position: absolute; width: 218px; height: 58px; left: 60px; top: 216px; background: #33D69D; border-radius: 2px;">
+        position: absolute; width: 218px; height: 58px; left: 60px; top: 216px; background: #33D69D; border-radius: 2px;">
 
         <a href = "financialforms" style = "position: absolute; width: 123px; height: 20px; left: 30px; top: 15px; font-family: Roboto;
             font-style: normal; font-weight: 500; font-size: 24px; line-height: 20px; display: flex; align-items: center; text-align: center;
