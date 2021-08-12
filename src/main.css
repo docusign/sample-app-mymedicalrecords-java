@@ -1,0 +1,87 @@
+.body {
+    font-size: 80%;
+    font-family: helvetica;
+}
+
+.heading {
+    font-family: Arial;
+    font-weight: bolder;
+    display: block;
+    font-size: x-large;
+    width: 1000px;
+    text-align: left;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+}
+
+.container0 {
+    font-family: helvetica;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: large;
+}
+
+.container1{
+    border: 3px solid white;
+    padding: 20px;
+    width: 1535px;
+    background-color: grey;
+}
+
+.img0 {
+    padding: 20px;
+}
+
+.consent{
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    -ms-transform: translateY(-50%, -50%);
+    transform: translateY(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.financial{
+    position: absolute;
+    top: 60%;
+    left: 51%;
+    -ms-transform: translateY(-50%, -50%);
+    transform: translateY(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.light-theme {
+    color: #000000;
+    background: #89dfe2;
+}
+.btn1 {
+    position: -ms-page;
+    top: 20px;
+    left: 250px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: black;
+    color: black;
+    font-weight: 300;
+    font-family: Helvetica;
+}
+
+.btn:focus { outline-style: var(--btnFontColor); }
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+  
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}

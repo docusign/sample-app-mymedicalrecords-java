@@ -103,7 +103,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private OAuth2ClientAuthenticationProcessingFilter jwtGrantFilter() {
         OAuth2SsoProperties authCodeGrantSso = jwtGrantSso();
         JWTAuthorizationCodeResourceDetails jwtCodeGrantClient = jwtCodeGrantClient();
-
         OAuth2ClientAuthenticationProcessingFilter filter =
             new OAuth2ClientAuthenticationProcessingFilter(authCodeGrantSso.getLoginPath());
         OAuth2RestTemplate restTemplate = new JWTOAuth2RestTemplate(jwtCodeGrantClient, oAuth2ClientContext);

@@ -4,7 +4,6 @@
 <h4 style = "color: white;">Form for Financial Responsibility</h4>
 <p style = "color: white;">Please fill out the name and email below that you want to receive the financial form. Thank you! </p>
 
-
 <form class="eg" action="" method="post" data-busy="form">
     <div class="form-group">
         <label for="signerEmail" style = "color: white;">Signer Email</label>
