@@ -3,12 +3,6 @@
 
 <h4 style = "color: white;">Form for Financial Responsibility</h4>
 <p style = "color: white;">Please fill out the name and email below that you want to receive the financial form. Thank you! </p>
-<p style = "color: white;">API methods used:
-    <a target='_blank' rel="noopener noreferrer" href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>
-    and
-    <a target='_blank' rel="noopener noreferrer"
-       href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient">EnvelopeViews::createRecipient</a>.
-</p>
 
 <form class="eg" action="" method="post" data-busy="form">
     <div class="form-group">

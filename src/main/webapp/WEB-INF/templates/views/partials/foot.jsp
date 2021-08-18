@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<div class = "footer" style ="position: absolute; width: 100%; height: 312px; top: 900px; left: -1px; background: #001730;">
+<div class = "footer" style ="position: absolute; width: 100%; height: 312px; top: 1000px; left: -1px; background: #001730;">
 
         <p style= " position: absolute; width: 433px; height: 29px; left: 605px; top: 57px; font-family: Roboto; 
           font-style: normal; font-weight: bold; font-size: 24px; line-height: 29px; color: #F9F9F9; z-index: 2;">
