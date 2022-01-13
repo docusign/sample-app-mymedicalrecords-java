@@ -32,7 +32,13 @@
                 <a class="nav-link" href="/" style = "color: white;">About <span class="sr-only">(current)</span></a>
             </li>
             <li class = "nav-item">
-                <a class="nav-link" href="patientdocs" style = "color: white;">Patient Documents<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="patientdocs" style = "color: white;">Review Patient Documents<span class="sr-only">(current)</span></a>
+            </li>
+            <li class = "nav-item">
+                <a class="nav-link" href="consentforms" style = "color: white;">Sign Consent Forms<span class="sr-only">(current)</span></a>
+            </li>
+            <li class = "nav-item">
+                <a class="nav-link" href="#" style = "color: white;">Upload Medical Documents<span class="sr-only">(current)</span></a>
             </li>
             <c:choose>
                 <c:when test="${locals.user != null}">
