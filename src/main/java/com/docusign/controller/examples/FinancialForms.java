@@ -1,4 +1,4 @@
-package com.docusign;
+package com.docusign.controller.examples;
 
 import com.docusign.controller.common.ds.AbstractEsignatureController;
 import com.docusign.controller.common.ds.EnvelopeHelpers;
@@ -15,6 +15,13 @@ import com.docusign.esign.model.RecipientViewRequest;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.Signer;
 import com.docusign.esign.model.ViewUrl;
+import com.docusign.DSConfiguration;
+import com.docusign.esign.model.Tabs;
+import com.docusign.esign.model.InitialHere;
+import com.docusign.esign.model.Text;
+import com.docusign.esign.model.DateSigned;
+import com.docusign.esign.model.FullName;
+import com.docusign.esign.model.SignHere;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,19 +35,12 @@ import java.util.Arrays;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- * Use embedded signing.<br/>
- * This example sends an envelope, and then uses embedded signing
- * for the first signer. Embedded signing provides a smoother user experience
- * for the signer: the DocuSign signing is initiated from your site.
- */
 @Controller
-@RequestMapping("/eg001")
-public class EG001ControllerEmbeddedSigning extends AbstractEsignatureController {
-
-    private static final String DOCUMENT_FILE_NAME = "World_Wide_Corp_lorem.pdf";
-    private static final String DOCUMENT_NAME = "Lorem Ipsum";
-    private static final int ANCHOR_OFFSET_Y = 20;
+@RequestMapping("/financialforms")
+public class FinancialForms extends AbstractEsignatureController{
+    private static final String DOCUMENT_FILE_NAME = "EMRFinancialForm.pdf";
+    private static final String DOCUMENT_NAME = "Financial Form";
+    private static final int ANCHOR_OFFSET_Y = 5;
     private static final int ANCHOR_OFFSET_X = 10;
     private static final String SIGNER_CLIENT_ID = "1000";
 
@@ -49,8 +49,8 @@ public class EG001ControllerEmbeddedSigning extends AbstractEsignatureController
 
 
     @Autowired
-    public EG001ControllerEmbeddedSigning(DSConfiguration config, Session session, User user) {
-        super(config, "eg001", "Use embedded signing");
+    public FinancialForms(DSConfiguration config, Session session, User user) {
+        super(config, "financialforms", "Financial Form");
         this.session = session;
         this.user = user;
     }
@@ -62,10 +62,10 @@ public class EG001ControllerEmbeddedSigning extends AbstractEsignatureController
         String signerEmail = args.getSignerEmail();
         String accountId = session.getAccountId();
 
-        // Step 1. Create the envelope definition
+        //Creates the envelope definition
         EnvelopeDefinition envelope = makeEnvelope(signerEmail, signerName);
 
-        // Step 2. Call DocuSign to create the envelope
+        //Call DocuSign to create the envelope
         ApiClient apiClient = createApiClient(session.getBasePath(), user.getAccessToken());
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envelope);
@@ -73,11 +73,11 @@ public class EG001ControllerEmbeddedSigning extends AbstractEsignatureController
         String envelopeId = envelopeSummary.getEnvelopeId();
         session.setEnvelopeId(envelopeId);
 
-        // Step 3. create the recipient view, the embedded signing
+        //Creates the recipient view - the embedded signing
         RecipientViewRequest viewRequest = makeRecipientViewRequest(signerEmail, signerName);
         ViewUrl viewUrl = envelopesApi.createRecipientView(accountId, envelopeId, viewRequest);
 
-        // Step 4. Redirect the user to the embedded signing
+        // Redirects the user to the embedded signing
         // Don't use an iFrame!
         // State can be stored/recovered using the framework's session or a
         // query parameter on the returnUrl (see the makeRecipientViewRequest method)
@@ -121,12 +121,35 @@ public class EG001ControllerEmbeddedSigning extends AbstractEsignatureController
     private static EnvelopeDefinition makeEnvelope(String signerEmail, String signerName) throws IOException {
         // Create a signer recipient to sign the document, identified by name and email
         // We set the clientUserId to enable embedded signing for the recipient
+        //Tabs signerTabs = EnvelopeHelpers.createSignerTabs(
+        //       EnvelopeHelpers.createSignHere("*sn2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+
+        //Tabs textTabs = EnvelopeHelpers.createTextTabs(
+        //    EnvelopeHelpers.createText("*txt2", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+
+        //Tabs dateTabs = EnvelopeHelpers.createDateSignedTabs(
+        //    EnvelopeHelpers.createDateSigned("*ds2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+
+        //Tabs fullNameTabs = EnvelopeHelpers.createFullNameTabs(
+        //    EnvelopeHelpers.createFullName("*nm2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+
+        SignHere signs = EnvelopeHelpers.createSignHere("*sn2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
+        DateSigned dates = EnvelopeHelpers.createDateSigned("*ds2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
+        FullName names = EnvelopeHelpers.createFullName("*nm2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
+        Text texts =EnvelopeHelpers.createText("*txt2", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
+    
+        Tabs signerTabs = new Tabs();
+        signerTabs.setSignHereTabs(Arrays.asList(signs));
+        signerTabs.setTextTabs(Arrays.asList(texts));
+        signerTabs.setDateSignedTabs(Arrays.asList(dates));
+        signerTabs.setFullNameTabs(Arrays.asList(names));
+
         Signer signer = new Signer();
         signer.setEmail(signerEmail);
         signer.setName(signerName);
         signer.clientUserId(SIGNER_CLIENT_ID);
         signer.recipientId("1");
-        signer.setTabs(EnvelopeHelpers.createSingleSignerTab("/sn1/", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X));
+        signer.setTabs(signerTabs);
 
         // Add the recipient to the envelope object
         Recipients recipients = new Recipients();

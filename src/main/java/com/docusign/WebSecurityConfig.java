@@ -46,23 +46,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private OAuth2ClientContext oAuth2ClientContext;
 
     @Bean
-    @ConfigurationProperties("authorization.code.grant.sso")
-    public OAuthProperties authCodeGrantSso() {
-        return new OAuthProperties();
-    }
-
-    @Bean
     @ConfigurationProperties("jwt.grant.sso")
     public OAuthProperties jwtGrantSso() {
         return new OAuthProperties();
     }
 
-    @Bean
-    @ConfigurationProperties("authorization.code.grant.client")
-    public AuthorizationCodeResourceDetails authCodeGrantClient() {
-    
-        return new AuthorizationCodeResourceDetails();
-    }
 
     @Bean
     @ConfigurationProperties("jwt.grant.client")
@@ -82,22 +70,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         registration.setFilter(oAuth2ClientContextFilter);
         registration.setOrder(-100);
         return registration;
-    }
-
-    private OAuth2ClientAuthenticationProcessingFilter authCodeGrantFilter() {
-        OAuth2SsoProperties authCodeGrantSso = authCodeGrantSso();
-        AuthorizationCodeResourceDetails authCodeGrantClient = authCodeGrantClient();
-    	
-
-        ResourceServerProperties userInfoResource = userInfoResource();
-        OAuth2ClientAuthenticationProcessingFilter filter =
-            new OAuth2ClientAuthenticationProcessingFilter(authCodeGrantSso.getLoginPath());
-        OAuth2RestTemplate restTemplate = new OAuth2RestTemplate(authCodeGrantClient, oAuth2ClientContext);
-        filter.setRestTemplate(restTemplate);
-        ResourceServerTokenServices tokenServices = new UserInfoTokenServices(userInfoResource.getUserInfoUri(),
-            authCodeGrantClient.getClientId());
-        filter.setTokenServices(tokenServices);
-        return filter;
     }
 
     private OAuth2ClientAuthenticationProcessingFilter jwtGrantFilter() {
@@ -130,23 +102,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .logout().logoutSuccessUrl("/").permitAll()
             .and()
             .csrf().disable();
-        http.apply(new CombinedAuthenticationConfigurer(Arrays.asList(authCodeGrantFilter(),
-            jwtGrantFilter())));
-    }
-
-    private static class CombinedAuthenticationConfigurer
-        extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
-
-        CompositeFilter filter = new CompositeFilter();
-
-        CombinedAuthenticationConfigurer(List<Filter> filters) {
-            filter.setFilters(filters);
-        }
-
-        @Override
-        public void configure(HttpSecurity builder) {
-            builder.addFilterAfter(this.filter,
-                AbstractPreAuthenticatedProcessingFilter.class);
-        }
+        http.addFilter(jwtGrantFilter());
+            
     }
 }

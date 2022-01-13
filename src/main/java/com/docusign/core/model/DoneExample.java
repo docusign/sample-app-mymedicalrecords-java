@@ -1,17 +1,12 @@
 package com.docusign.core.model;
 
+import com.docusign.controller.common.DiffField;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
-import com.google.gson.Gson;
-import org.codehaus.jackson.map.SerializationConfig;
-import org.json.JSONObject;
 import org.springframework.ui.ModelMap;
-
-import com.docusign.core.common.DiffField;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

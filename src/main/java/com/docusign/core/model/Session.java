@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 public class Session implements Serializable {
     private static final long serialVersionUID = 2695379118371574037L;
-
+// TODO: REMOVE UNUSED STRINGS BELOW
     private String accountId;
     private String accountName;
     private String basePath;
@@ -26,8 +26,7 @@ public class Session implements Serializable {
     private List<EnvelopeDocumentInfo> envelopeDocuments;
     private String permissionProfileId;
     private String permissionProfileName;
-    private String apiIndexPath;
-    private AuthType authTypeSelected =  AuthType.AGC;
+    private AuthType authTypeSelected =  AuthType.JWT;
     private boolean refreshToken = false;
     private String clickwrapId;
     private String clickwrapVersionNumber;
