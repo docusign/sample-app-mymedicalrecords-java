@@ -49,6 +49,14 @@ public class IndexController {
 
     }
 
+    @GetMapping(path = "/financialforms")
+    public ModelAndView returnFinancialForms(ModelMap model){
+         return new ModelAndView("/pages/examples/financialforms");
+
+    }
+
+
+
     @GetMapping(path = "/ds-return")
     public String returnController(@RequestParam(value = ATTR_STATE, required = false) String state,
             @RequestParam(value = ATTR_EVENT, required = false) String event,
