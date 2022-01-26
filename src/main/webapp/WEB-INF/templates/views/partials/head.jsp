@@ -57,7 +57,7 @@
             </c:choose>
         </ul>
         <c:if test="${locals.user != null}">
-           <span class="navbar-text">
+           <span class="navbar-text" style = "color: white;">
             Welcome ${locals.user.name}
           </span>
         </c:if>
@@ -73,7 +73,8 @@
 
 
     <div class="col-md-12 feedback" id="feedback">
-        <h3>Working...&nbsp;&nbsp;&nbsp;<span></span></h3>
+
+        <h3 style="color: white">Working...&nbsp;&nbsp;&nbsp;<span></span></h3>
     </div>
 
     <section id="busy" class="feedback">
@@ -86,7 +87,7 @@
         </div>
     </section>
 
-    <c:choose>
+    <!-- <c:choose>
         <c:when test="${locals.user == null}">
             <div class="container-full-bg">
             <section id="content" style="margin-top:-60px!important; padding-top:30px!important;">
@@ -96,3 +97,8 @@
             <section id="content">
             </c:otherwise>
     </c:choose>
+
+     -->
+
+     <div class="container">
+        <section id="content">
