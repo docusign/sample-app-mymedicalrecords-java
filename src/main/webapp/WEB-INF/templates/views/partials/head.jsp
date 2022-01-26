@@ -41,7 +41,7 @@
             <li class = "nav-item">
                 <a class="nav-link" href="financialforms" style = "color: white;">Financial Documentation<span class="sr-only">(current)</span></a>
             </li>
-            <c:choose>
+            <!-- <c:choose>
                 <c:when test="${locals.user != null}">
                     <li>
                         <a class="nav-link" href="/logout" id="logout" style = "color: white;"
@@ -54,11 +54,11 @@
                            data-busy="href">Login <span class="sr-only">(current)</span></a>
                     </li>
                 </c:otherwise>
-            </c:choose>
+            </c:choose> -->
         </ul>
         <c:if test="${locals.user != null}">
            <span class="navbar-text" style = "color: white;">
-            Welcome ${locals.user.name}
+            Welcome Dr. Osbourne <!-- Welcome ${locals.user.name} -->
           </span>
         </c:if>
     </div>
@@ -101,4 +101,4 @@
      -->
 
      <div class="container">
-        <section id="content">
+        <section id="content" style='margin-top:30px!important; padding-top:30px!important'>
