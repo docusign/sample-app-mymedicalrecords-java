@@ -102,7 +102,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .logout().logoutSuccessUrl("/").permitAll()
             .and()
             .csrf().disable();
-        http.addFilter(jwtGrantFilter());
-            
+        http.addFilterAfter(jwtGrantFilter(), AbstractPreAuthenticatedProcessingFilter.class);
     }
 }

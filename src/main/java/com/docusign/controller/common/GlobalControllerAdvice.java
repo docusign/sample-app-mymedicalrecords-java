@@ -54,7 +54,7 @@ public class GlobalControllerAdvice {
     private final Session session;
     private final User user;
     private Optional<OAuth.Account> account;
-    private AuthType authTypeSelected = AuthType.AGC;
+    private AuthType authTypeSelected = AuthType.JWT;
 
     @Autowired
     public GlobalControllerAdvice(DSConfiguration config, Session session, User user, Optional<OAuth.Account> account) {

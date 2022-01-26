@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="../../../partials/head.jsp"/>
+<jsp:include page="../../partials/head.jsp"/>
 
 <div class = "profile" style = "position: absolute; width: 1086px; height: 324px; left: 177px; top: 192px; background: #024081;
     border-radius: 7px;">
@@ -96,4 +96,4 @@
 </div>
 
 
-<jsp:include page="../../../partials/foot.jsp"/>
+<jsp:include page="../../partials/foot.jsp"/>

@@ -1,10 +1,12 @@
-package com.docusign.controller.common;
+package com.docusign.controller.common.ds;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.docusign.controller.common.DiffField;
 
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.lang3.ObjectUtils;

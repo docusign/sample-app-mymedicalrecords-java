@@ -24,6 +24,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" >
         <span class="navbar-toggler-icon"></span>
+
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault" style = "background-color: #003368;">
@@ -38,7 +39,7 @@
                 <a class="nav-link" href="consentforms" style = "color: white;">Sign Consent Forms<span class="sr-only">(current)</span></a>
             </li>
             <li class = "nav-item">
-                <a class="nav-link" href="#" style = "color: white;">Upload Medical Documents<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="financialforms" style = "color: white;">Financial Documentation<span class="sr-only">(current)</span></a>
             </li>
             <c:choose>
                 <c:when test="${locals.user != null}">

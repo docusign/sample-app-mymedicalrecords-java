@@ -8,6 +8,7 @@ import com.docusign.esign.client.auth.OAuth.OAuthToken;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -60,7 +61,7 @@ public class JWTOAuth2RestTemplate extends OAuth2RestTemplate {
     private OAuth2AccessToken accessToken() throws LauncherException {
         logger.info("Fetching an access token via JWT grant...");
 // Only signature scope is needed. Impersonation scope is implied.
-        List<String> scopes = resource.getScopeByApiName();
+        List<String> scopes = Arrays.asList("signature");
         byte[] privateKeyBytes;
         try {
             privateKeyBytes = resource.getRsaBytes();

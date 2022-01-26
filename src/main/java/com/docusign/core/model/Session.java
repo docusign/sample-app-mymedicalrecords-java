@@ -26,7 +26,6 @@ public class Session implements Serializable {
     private List<EnvelopeDocumentInfo> envelopeDocuments;
     private String permissionProfileId;
     private String permissionProfileName;
-    private AuthType authTypeSelected =  AuthType.JWT;
     private boolean refreshToken = false;
     private String clickwrapId;
     private String clickwrapVersionNumber;

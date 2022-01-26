@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="../../../partials/head.jsp"/>
+<jsp:include page="./../../partials/head.jsp"/>
 
 <h4 style = "color: white;">Form for Financial Responsibility</h4>
 <p style = "color: white;">Please fill out the name and email below that you want to receive the financial form. Thank you! </p>
@@ -21,4 +21,4 @@
     <button type="submit" class="btn btn-docu">Submit</button>
 </form>
 
-<jsp:include page="../../../partials/foot.jsp"/>
+<jsp:include page="./../../partials/foot.jsp"/>

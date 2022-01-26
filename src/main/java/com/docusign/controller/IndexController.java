@@ -39,8 +39,9 @@ public class IndexController {
 
     @GetMapping(path = "/ds/mustAuthenticate")
     public ModelAndView mustAuthenticateController(ModelMap model) {
-        model.addAttribute(ATTR_TITLE, "Authenticate with DocuSign");
-        return new ModelAndView(getLoginPath());
+        // model.addAttribute(ATTR_TITLE, "Authenticate with DocuSign");
+        // return new ModelAndView(getLoginPath());
+        return new ModelAndView("redirect:" + getLoginPath());
     }
 
     @GetMapping(path = "/patientdocs")
@@ -49,7 +50,7 @@ public class IndexController {
 
     }
 
-    @GetMapping(path = "/financialforms")
+    @GetMapping(path = "/finance")
     public ModelAndView returnFinancialForms(ModelMap model){
          return new ModelAndView("/pages/examples/financialforms");
 
