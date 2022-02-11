@@ -72,7 +72,7 @@
     </c:if> -->
 
 
-    <div class="col-md-12 feedback" id="feedback">
+    <!-- <div class="col-md-12 feedback" id="feedback">
 
         <h3 style="color: white">Working...&nbsp;&nbsp;&nbsp;<span></span></h3>
     </div>
@@ -85,7 +85,7 @@
             <div class="rect4"></div>
             <div class="rect5"></div>
         </div>
-    </section>
+    </section> -->
 
     <!-- <c:choose>
         <c:when test="${locals.user == null}">
@@ -100,5 +100,6 @@
 
      -->
 
-     <div class="container">
-        <section id="content" style='margin-top:30px!important; padding-top:30px!important'>
+     <div class="container" style="min-height: calc(100vh - 312 px)">
+        <section id="content" style='margin-top:30px!important; padding-top:30px!important; min-height: calc(100vh - 312 px)'>
+                

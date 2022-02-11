@@ -96,4 +96,6 @@
 </div>
 
 
+</div>
+
 <jsp:include page="../../partials/foot.jsp"/>
