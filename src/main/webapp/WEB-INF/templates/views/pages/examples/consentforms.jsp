@@ -1,0 +1,168 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <jsp:include page="../../partials/head.jsp" />
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="formContainer">
+                <h4 class="consentLead">Consent Form</h4>
+                <p class="consentSub">Fill out the information below to receive the telemedicine consent form. We'll
+                    never share your contact information with anyone else. <a style="color:#00BAA1;" target="_blank"
+                        href="https://www.docusign.com/company/privacy-policy">Privacy Policy</a></p>
+
+                <form class="eg" action="" method="post" data-busy="form">
+
+                    <div class="form-group">
+                        <label for="countryCode" style="color: white;">Signer Country Code</label>
+                        <select class="form-control" id="countryCode" name="countryCode" aria-describedby="accessHelp"
+                            placeholder="1" required />
+
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber" type="tel" style="color: white;">Signer Phone Number</label>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="(xxx)-xxx-xxxx"
+                            name="phoneNumber" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signerEmail" style="color: white;">Signer Email</label>
+                        <input type="email" class="form-control" id="signerEmail" name="signerEmail"
+                            aria-describedby="emailHelp"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signerName" style="color: white;">Signer Name</label>
+                        <input type="text" class="form-control" id="signerName" 
+                            name="signerName"  required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ccCountryCode" style="color: white;">CC Country Code</label>
+                        <select class="form-control" id="ccCountryCode" name="ccCountryCode"  required >
+
+                            <option value="1">1</option>
+                        </select>
+                        <div class="form-group">
+                            <label for="ccPhoneNumber" style="color: white;">CC Phone Number</label>
+                            <input type="text" class="form-control" id="ccPhoneNumber" placeholder="(xxx)-xxx-xxxx"
+                                name="ccPhoneNumber"  required />
+                        </div>
+                        <div class="form-group">
+                            <label for="ccEmail" style="color: white;">CC Email</label>
+                            <input type="email" class="form-control" id="ccEmail" name="ccEmail"
+                               required />
+                        </div>
+                        <div class="form-group">
+                            <label for="ccName" style="color: white;">CC Name</label>
+                            <input type="text" class="form-control" id="ccName"  name="ccName"
+                                required>
+                        </div>
+                        <input type="hidden" name="_csrf" value="${csrfToken}">
+                        <button type="submit" class="btn-block btn-docu">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+
+        <a href="#" class="showmore" onclick=expander()>Behind the scenes</a>
+        <div class="showArrow"></div>
+        <div class="behindScenes">
+
+<h4>This sample features:</h4>
+
+<ul>
+<li>SMS Delivery</li>
+<li>Remote Signing</li>
+</ul>
+
+
+
+<h4>Code Flow:</h4>
+
+
+<p>View source files <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">consentform.java</a> and <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java">EnvelopeHelpers.java</a> on Github.
+
+
+
+
+
+<h4>Step 1</h4>   
+
+<p>We have the patient fill out this form with their contact information.  With this information, we'll generate an envelope definition:</p>
+
+
+<pre style="color:#2ef69b">
+
+    EnvelopeDefinition envelope = createEnvelope(args);
+        
+    </pre>
+
+
+
+<h4>Step 2</h4>
+
+<p>Specifically, within that envelope, we need to handle SMS notifications. Here's how we can accomplish that: </p>
+
+
+<pre style="color:#2ef69b">
+
+...
+......
+.........
+
+RecipientAdditionalNotification smsNotif = new RecipientAdditionalNotification();
+smsNotif.setSecondaryDeliveryMethod("SMS");
+RecipientAdditionalNotification ccSmsNotif = new RecipientAdditionalNotification();
+ccSmsNotif.setSecondaryDeliveryMethod("SMS");
+
+RecipientPhoneNumber phoneNumber = new RecipientPhoneNumber();
+phoneNumber.setCountryCode(args.getCountryCode());
+phoneNumber.setNumber(args.getPhoneNumber());
+smsNotif.phoneNumber(phoneNumber);
+signer.setAdditionalNotifications(Arrays.asList(smsNotif));
+
+RecipientPhoneNumber ccPhoneNumber = new RecipientPhoneNumber();
+ccPhoneNumber.setCountryCode(args.getCcCountryCode());
+ccPhoneNumber.setNumber(args.getCcPhoneNumber());
+ccSmsNotif.phoneNumber(ccPhoneNumber);
+cc.setAdditionalNotifications(Arrays.asList(ccSmsNotif));
+
+.........
+......
+...
+
+</pre>
+
+
+<h4>Step 3</h4>  
+
+<p>To complete our envelope definition, we'll need to specify the email subject line, set the recipients (as an Array list, per API specifications) and to set the Documents. Finally, we'll set the status to 'sent' to send the envelope:</p>
+
+
+<pre style="color:#2ef69b">
+
+... 
+...... 
+.........    
+EnvelopeDefinition envelope = new EnvelopeDefinition();
+
+envelope.setEmailSubject("Please sign this consent form");
+envelope.setDocuments(Arrays.asList(EnvelopeHelpers.createDocumentFromFile(PDF_DOCUMENT_FILE_NAME, PDF_DOCUMENT_NAME,"1")));
+envelope.setRecipients(EnvelopeHelpers.createRecipients(signer, cc));
+
+envelope.setStatus(args.getStatus());
+
+return envelope;
+
+</pre>
+
+
+<h4>Step 4</h4>  
+
+<p>To send an envelope through the DocuSign eSignature API, we'll need the account ID of the user and an access token, which was generated earlier upon opening the form.  From there, we'll pass along the envelope that was generated in Step 1. We return the envelope ID as a GET response parameter in the url.
+. This is the createEnevelope function that sends off the API call as found on line 62 in ConsentForms.java:</p>
+
+<pre style="color:#2ef69b">
+EnvelopeSummary results = envelopesApi.createEnvelope(session.getAccountId(), envelope);
+</pre>
+
+        </div>
