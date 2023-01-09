@@ -43,51 +43,28 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source file <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">financialforms.java</a> on Github.
+<p>View source file <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">financialforms.java</a> on GitHub.
 
 
 <h4>Step 1</h4>   
 
 
 
-<p>This example uses an embedded signing envelope. The end-user is expected to complete it here and now. First, we generate the envelope definition: </p>
-
-<pre style="color:#2ef69b">
-
-EnvelopeDefinition envelope = makeEnvelope(signerEmail, signerName);
-
-
-</pre>
+<p>First, we generate the envelope definition using the provided email address and name.</p>
 
 <h4>Step 2</h4>   
 
 
 
-<p>Next, we'll send the envelope to DocuSign via the createEnvelope call to retrieve and Envelope ID: </p>
+<p>Next, we'll send the envelope to DocuSign via the <a href = "" target="_blank">Envelopes:create method to retrieve the Envelope ID. </a></p>
 
-<pre style="color:#2ef69b">
-ApiClient apiClient = createApiClient(session.getBasePath() + "/restapi", user.getAccessToken());
-EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
-EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envelope);
-
-String envelopeId = envelopeSummary.getEnvelopeId();
-session.setEnvelopeId(envelopeId);        
-
-</pre>
 
 <h4>Step 3</h4>   
 
 
 
 
-<p>Finally, we'll create a recipient and resulting redirect URL that we can use to embed the DocuSign envelope into our application: </p>
+<p>Finally, we'll create a recipient and resulting redirect URL that we can use to embed the DocuSign envelope into our application. </p>
 
-<pre style="color:#2ef69b">
-
-RecipientViewRequest viewRequest = makeRecipientViewRequest(signerEmail, signerName);
-ViewUrl viewUrl = envelopesApi.createRecipientView(accountId, envelopeId, viewRequest);
-
-return new RedirectView(viewUrl.getUrl());
-</pre>
     
 </div>

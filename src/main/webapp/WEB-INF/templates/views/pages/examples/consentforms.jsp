@@ -79,7 +79,7 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source files <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">consentform.java</a> and <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java">EnvelopeHelpers.java</a> on Github.
+<p>View source files <a style="color:whitesmoke" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">consentform.java</a> and <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java" target="_blank" >EnvelopeHelpers.java</a> on GitHub.
 
 
 
@@ -100,69 +100,17 @@
 
 <h4>Step 2</h4>
 
-<p>Specifically, within that envelope, we need to handle SMS notifications. Here's how we can accomplish that: </p>
-
-
-<pre style="color:#2ef69b">
-
-...
-......
-.........
-
-RecipientAdditionalNotification smsNotif = new RecipientAdditionalNotification();
-smsNotif.setSecondaryDeliveryMethod("SMS");
-RecipientAdditionalNotification ccSmsNotif = new RecipientAdditionalNotification();
-ccSmsNotif.setSecondaryDeliveryMethod("SMS");
-
-RecipientPhoneNumber phoneNumber = new RecipientPhoneNumber();
-phoneNumber.setCountryCode(args.getCountryCode());
-phoneNumber.setNumber(args.getPhoneNumber());
-smsNotif.phoneNumber(phoneNumber);
-signer.setAdditionalNotifications(Arrays.asList(smsNotif));
-
-RecipientPhoneNumber ccPhoneNumber = new RecipientPhoneNumber();
-ccPhoneNumber.setCountryCode(args.getCcCountryCode());
-ccPhoneNumber.setNumber(args.getCcPhoneNumber());
-ccSmsNotif.phoneNumber(ccPhoneNumber);
-cc.setAdditionalNotifications(Arrays.asList(ccSmsNotif));
-
-.........
-......
-...
-
-</pre>
+<p>We then use the phone numbers provided to add additional SMS notifications. </p>
 
 
 <h4>Step 3</h4>  
 
-<p>To complete our envelope definition, we'll need to specify the email subject line, set the recipients (as an Array list, per API specifications) and to set the Documents. Finally, we'll set the status to 'sent' to send the envelope:</p>
-
-
-<pre style="color:#2ef69b">
-
-... 
-...... 
-.........    
-EnvelopeDefinition envelope = new EnvelopeDefinition();
-
-envelope.setEmailSubject("Please sign this consent form");
-envelope.setDocuments(Arrays.asList(EnvelopeHelpers.createDocumentFromFile(PDF_DOCUMENT_FILE_NAME, PDF_DOCUMENT_NAME,"1")));
-envelope.setRecipients(EnvelopeHelpers.createRecipients(signer, cc));
-
-envelope.setStatus(args.getStatus());
-
-return envelope;
-
-</pre>
+<p>To complete our envelope definition, we'll need to specify the email subject line, set the recipients (as an Array list, per API specifications) and to set the Documents. Finally, we'll set the status to 'sent' to send the envelope.</p>
 
 
 <h4>Step 4</h4>  
 
 <p>To send an envelope through the DocuSign eSignature API, we'll need the account ID of the user and an access token, which was generated earlier upon opening the form.  From there, we'll pass along the envelope that was generated in Step 1. We return the envelope ID as a GET response parameter in the url.
-. This is the createEnevelope function that sends off the API call as found on line 62 in ConsentForms.java:</p>
-
-<pre style="color:#2ef69b">
-EnvelopeSummary results = envelopesApi.createEnvelope(session.getAccountId(), envelope);
-</pre>
+. This is the createEnevelope function that sends off the API call as found on line 62 in ConsentForms.java.</p>
 
         </div>

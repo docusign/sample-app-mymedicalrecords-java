@@ -403,7 +403,8 @@ a.done {
     color: whitesmoke;
 }
 a.cta.learnMore {
-  padding-right:5rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
 } 
 
 a.cta {
@@ -682,6 +683,7 @@ p.financSub {
   position: absolute;
   display: initial;
   left: 44%;
+  margin-bottom: 40px;
 }
 
 .resContainer {
@@ -710,7 +712,7 @@ p.financSub {
     }
 
   .bottomCopy {
-    bottom: -12rem;
+    bottom: -10rem;
     position: absolute;
     display: initial;
   }

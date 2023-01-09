@@ -12,18 +12,16 @@
                         DocuSign: It is time to agree better</p>
 
                         <p class="footSub">
-                        Docusign helps organizations connect and automate how they prepare, sign, act on and </p>
-                        <p class="footSub">
-                        manage agreements
+                        DocuSign helps organizations connect and automate how they prepare, sign, act on and manage agreements.
                 </p>
 
                 <div class="ctaLeft">
-                <a href="https://go.docusign.com/o/sandbox/" class="cta"><span style="text-align:center">
+                <a href="https://go.docusign.com/o/sandbox/" target="_blank" class="cta"><span style="text-align:center">
                         Create&nbsp;developer&nbsp;account
                 </span></a>
         </div>
         <div class="ctaRight">
-                <a href="https://developers.docusign.com/" class="cta learnMore"><span style="text-align:center">
+                <a href="https://developers.docusign.com/" target="_blank" class="cta learnMore"><span style="text-align:center">
                         Learn&nbsp;More
                 </span></a>
                 </div>
