@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>15</java.version>
-        <oauth2.version>2.6.2</oauth2.version>
+        <oauth2.version>2.6.8</oauth2.version>
         <commonsio.version>2.7</commonsio.version>
         <docusign.version>3.22.0</docusign.version>
 
