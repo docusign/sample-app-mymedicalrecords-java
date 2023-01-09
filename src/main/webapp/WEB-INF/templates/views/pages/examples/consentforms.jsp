@@ -90,13 +90,6 @@
 <p>We have the patient fill out this form with their contact information.  With this information, we'll generate an envelope definition:</p>
 
 
-<pre style="color:#2ef69b">
-
-    EnvelopeDefinition envelope = createEnvelope(args);
-        
-    </pre>
-
-
 
 <h4>Step 2</h4>
 

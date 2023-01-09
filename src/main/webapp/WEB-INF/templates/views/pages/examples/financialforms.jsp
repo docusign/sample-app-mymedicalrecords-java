@@ -56,7 +56,7 @@
 
 
 
-<p>Next, we'll send the envelope to DocuSign via the <a href = "" target="_blank">Envelopes:create method to retrieve the Envelope ID. </a></p>
+<p>Next, we'll send the envelope to DocuSign via the <a style="color:whitesmoke" href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" target="_blank">Envelopes:create</a> method to retrieve the Envelope ID.</p>
 
 
 <h4>Step 3</h4>   
