@@ -26,7 +26,8 @@
 </div> 
 <div class="col-md-6">
 
-    <a href="#" class="showmore" onclick=expander()>Behind the scenes</a> <div class="showArrow"></div>
+    <a href="#" class="showmore" onclick=expander()>Behind the scenes</a> 
+    <div class="showArrow"  onclick=expander()></div>
     <div class="behindScenes">
 
 

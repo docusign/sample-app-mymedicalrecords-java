@@ -64,7 +64,7 @@
     <div class="col-sm-6">
 
         <a href="#" class="showmore" onclick=expander()>Behind the scenes</a>
-        <div class="showArrow"></div>
+        <div class="showArrow" onclick=expander()></div>
         <div class="behindScenes">
 
 <h4>This sample features:</h4>

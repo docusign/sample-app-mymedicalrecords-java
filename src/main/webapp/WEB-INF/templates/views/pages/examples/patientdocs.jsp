@@ -11,7 +11,7 @@
 
             <a href="consentforms">Get Started</a>
         </div>
-        <pre style="position: absolute; width: 412px; top: 255px; font-family: Roboto; font-style: normal;
+        <pre style="position: absolute; width: 412px; top: 225px; font-family: Roboto; font-style: normal;
         font-weight: normal; font-size: 16px; line-height: 21px; color:#00BAA1;">
         <p style="text-align: center; padding-right: 44px; font-weight: 700; color: #33D69D">DocuSign features used:</p> 
             <li class="liGreen">Responsive Signing (SMS Delivery)</li>
@@ -34,7 +34,7 @@
 
 
 
-        <pre style="position: absolute; width: 412px; left: 25px; top: 255px; font-family: Roboto; font-style: normal;
+        <pre style="position: absolute; width: 412px; left: 25px; top: 225px; font-family: Roboto; font-style: normal;
         font-weight: normal; font-size: 16px; line-height: 21px; color:#00BAA1;">
         <p style="text-align: center; padding-right: 44px;font-weight:700; color:#33D69D">DocuSign features used: </p>
         <li class="liGreen">Embedded Signing (recipient view)</li>
