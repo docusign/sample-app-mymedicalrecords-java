@@ -26,8 +26,8 @@
 
 <p class="font-weight:500">Get Started with the DocuSign APIs Today</p>
 
-<a href="https://go.docusign.com/o/sandbox/" class="done"><span style="text-align:center">
-    Create&nbsp;developer&nbsp;account
+<a href="https://go.docusign.com/o/sandbox/" target="_blank" class="done"><span style="text-align:center">
+    Create&nbsp;Developer&nbsp;Account
 </span></a>
 
 <p class="font-weight:500">With a developer account, you can test our APIs for free. Developer accounts do not expire and have enterprise-level features enabled.</p> 

@@ -103,6 +103,6 @@
 
 <h4>Step 4</h4>  
 
-<p>To send an envelope through the DocuSign eSignature REST API in the URL. This is the <a href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" style="color:#00BAA1;" target="_blank" >Envelopes:create</a> method.</p>
+<p>To send an envelope through the DocuSign eSignature API, we'll need the account ID of the user and an access token, which was generated earlier. From there, we'll pass along the envelope to the <a href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" style="color:#00BAA1;" target="_blank" >Envelopes:create</a> method, and return an envelope ID to the response output URL in the application.</p>
 
         </div>
