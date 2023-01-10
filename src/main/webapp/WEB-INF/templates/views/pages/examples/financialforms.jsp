@@ -43,7 +43,7 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source file <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">financialforms.java</a> on GitHub.
+<p>View source file <a style="color:#00BAA1;" target='_blank' href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">financialforms.java</a> on GitHub.
 
 
 <h4>Step 1</h4>   
@@ -56,7 +56,7 @@
 
 
 
-<p>Next, we'll send the envelope to DocuSign via the <a style="color:whitesmoke" href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" target="_blank">Envelopes:create</a> method to retrieve the Envelope ID.</p>
+<p>Next, we'll send the envelope to DocuSign via the <a style="color:#00BAA1;" target="_blank" href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" target="_blank">Envelopes:create</a> method to retrieve the Envelope ID.</p>
 
 
 <h4>Step 3</h4>   
@@ -64,7 +64,7 @@
 
 
 
-<p>Finally, we'll create a recipient and resulting redirect URL that we can use to embed the DocuSign envelope into our application. </p>
+<p>Finally, we'll create a recipient and a redirect URL that we can use to embed the DocuSign envelope into our application. </p>
 
     
 </div>

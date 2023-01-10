@@ -426,13 +426,13 @@ a.cta {
 }
 
 .ctaLeft{
-  left: 35%;
+  left: 31%;
   top: 213px;
   position: absolute;
   }
   
   .ctaRight{
-  left: 54%;
+  left: 52%;
   top: 212px;
   position: absolute;
   }
@@ -585,7 +585,7 @@ h4.consentLead {
 p.consentSub {
   color: white;
   position: relative;
-  left: 10px;
+  /* left: 10px; */
   font-size: 14px;
   margin-right: 30px;
 }
@@ -718,7 +718,7 @@ p.financSub {
   }
 
   a.cta {
-    left: 38%;
+    left: 21%;
   }
 
 

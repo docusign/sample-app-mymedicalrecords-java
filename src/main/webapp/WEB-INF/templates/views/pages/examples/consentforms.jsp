@@ -79,7 +79,7 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source files <a style="color:whitesmoke" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">consentform.java</a> and <a style="color:whitesmoke" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java" target="_blank" >EnvelopeHelpers.java</a> on GitHub.
+<p>View source files <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">ConsentForms.java</a> and <a style="color:#00BAA1;" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java" target="_blank" >EnvelopeHelpers.java</a> on GitHub.
 
 
 
@@ -87,7 +87,7 @@
 
 <h4>Step 1</h4>   
 
-<p>We have the patient fill out this form with their contact information.  With this information, we'll generate an envelope definition:</p>
+<p>We have the patient fill out this form with their contact information.  With this information, we'll generate an envelope definition.</p>
 
 
 
@@ -103,7 +103,6 @@
 
 <h4>Step 4</h4>  
 
-<p>To send an envelope through the DocuSign eSignature API, we'll need the account ID of the user and an access token, which was generated earlier upon opening the form.  From there, we'll pass along the envelope that was generated in Step 1. We return the envelope ID as a GET response parameter in the url.
-. This is the createEnevelope function that sends off the API call as found on line 62 in ConsentForms.java.</p>
+<p>To send an envelope through the DocuSign eSignature REST API in the URL. This is the <a href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" style="color:#00BAA1;" target="_blank" >Envelopes:create</a> method.</p>
 
         </div>

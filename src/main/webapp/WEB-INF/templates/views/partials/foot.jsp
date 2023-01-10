@@ -9,7 +9,7 @@
 
 
                 <p class="footLead">
-                        DocuSign: It is time to agree better</p>
+                        DocuSign: It's time to agree better</p>
 
                         <p class="footSub">
                         DocuSign helps organizations connect and automate how they prepare, sign, act on and manage agreements.
@@ -17,7 +17,7 @@
 
                 <div class="ctaLeft">
                 <a href="https://go.docusign.com/o/sandbox/" target="_blank" class="cta"><span style="text-align:center">
-                        Create&nbsp;developer&nbsp;account
+                        Create&nbsp;Developer&nbsp;Account
                 </span></a>
         </div>
         <div class="ctaRight">
