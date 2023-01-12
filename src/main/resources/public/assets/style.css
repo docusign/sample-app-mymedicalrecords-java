@@ -7,7 +7,7 @@ body {
 
 .pDocTitle {
 
-text-shadow: 3px -2px 2px #001730;
+text-shadow: 2px 0px 1px #001730;
 
 text-align: ;
 }
@@ -361,7 +361,7 @@ div.arrow img {
   height: 58px;
   left: 92px;
   top: 75px;
-  background: #ff8302e0;
+  background: #02ff73e0;
   border-radius: 9px;
   text-shadow: 1px -1px 2px #2125298f;
   font-weight: 700;
@@ -419,11 +419,11 @@ a.cta {
   font-size: 20px;
   line-height: 20px;
   align-items: center;
-  color: whitesmoke;
+  color: white;
   padding-right: 1rem;
   border: 3.5px solid #00f9a2;
   border-radius: 7px;
-  background: #e27f0c;
+  background: #0cf380;
   text-shadow: 1px -1px 2px #2125298f;
 }
 
@@ -482,7 +482,7 @@ a.cta {
   height: 460px;
   top: 24px;
   /* background: #024081; */
-  background-image: linear-gradient(to bottom left, #00ffa6, #000000);
+  background-image: linear-gradient(to bottom left, #78a8ff, #0878a3);
   border-radius: 7px;
   border: 2px solid #00172e;
   left: 90px;
@@ -508,7 +508,7 @@ a.cta {
   height: 460px;
   top: -437px;
   /* background: #024081; */
-  background-image: linear-gradient(to bottom left, #00172e, #2ef69b );
+  background-image: linear-gradient(to bottom left, #78a8ff, #0878a3);
   right: -533px;
   border-radius: 7px;
   border: 2px solid #00172e;
@@ -609,6 +609,7 @@ p.financSub {
 
 .liGreen {
   display: inline-block;
+  text-shadow: 2px 0px 1px #001730;
   margin: 0;
 }
 
