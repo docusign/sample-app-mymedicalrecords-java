@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.tally-medical</groupId>
-    <artifactId>my-medical-records</artifactId>
+    <artifactId>MyMedicalRecords</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

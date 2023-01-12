@@ -23,7 +23,7 @@
       <div class="logo"></div>
 
       <div class="hero-banner">
-        <p class="hero">My-Medical-Records Sample Application</p>
+        <p class="hero">MyMedicalRecords Sample Application</p>
         <p class="tagline">This is a sample application showcasing an integration between the DocuSign eSignature REST API and an Electronic Medical Records system. This application is open source and all of the code is located in our GitHub repository.</p>
       </div>
 

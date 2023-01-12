@@ -165,7 +165,7 @@ a.navbar-text.name:hover {
 
 .btn-docu {
 
-  background-color: #00BAA1;
+  background-color: #33D69D;
   color: #FFF;
   border-color: #121517;
   position: relative;
@@ -186,7 +186,7 @@ a.navbar-text.name:hover {
 .btn-docu:active,
 .btn-docu.active,
 .open .dropdown-toggle.btn-docu {
-  background-color: #02d6ba;
+  background-color: #33D69D;
   color: #FFF;
   border-color: #050607;
 }
@@ -361,7 +361,7 @@ div.arrow img {
   height: 58px;
   left: 92px;
   top: 75px;
-  background: #02ff73e0;
+  background: #33D69D;
   border-radius: 9px;
   text-shadow: 1px -1px 2px #2125298f;
   font-weight: 700;
@@ -421,9 +421,9 @@ a.cta {
   align-items: center;
   color: white;
   padding-right: 1rem;
-  border: 3.5px solid #00f9a2;
+  border: 3.5px solid #33D69D;
   border-radius: 7px;
-  background: #0cf380;
+  background: #33D69D;
   text-shadow: 1px -1px 2px #2125298f;
 }
 
@@ -544,7 +544,7 @@ a.showmore {
   /* position: relative; */
   right: 80px;
   bottom: -30px;
-  color: #2EF69B;
+  color: #33D69D;
   font-size: 30px;
 }
 
@@ -554,7 +554,7 @@ a.showmore {
   background-repeat: no-repeat;
   background-position: 27% 90%;
   position: absolute;
-  color: #2EF69B;
+  color: #33D69D;
   height: 75px;
   right: 147px;
   width: 254px;
@@ -615,7 +615,7 @@ p.financSub {
 
 .liGreen::before {
 
-  color: #2EF69B;
+  color: #33D69D;
   font-weight: bold;
   content: "\2022";
   margin: 15px;
