@@ -361,7 +361,7 @@ div.arrow img {
   height: 58px;
   left: 92px;
   top: 75px;
-  background: #33D69D;
+  background: #ff8302e0;
   border-radius: 9px;
   text-shadow: 1px -1px 2px #2125298f;
   font-weight: 700;
@@ -419,10 +419,12 @@ a.cta {
   font-size: 20px;
   line-height: 20px;
   align-items: center;
-  color: #2EF69B;
+  color: whitesmoke;
   padding-right: 1rem;
-  border: 3.5px solid #2EF69B;
+  border: 3.5px solid #00f9a2;
   border-radius: 7px;
+  background: #e27f0c;
+  text-shadow: 1px -1px 2px #2125298f;
 }
 
 .ctaLeft{
@@ -480,7 +482,7 @@ a.cta {
   height: 460px;
   top: 24px;
   /* background: #024081; */
-  background-image: linear-gradient(to bottom left, #011830, #1861ad);
+  background-image: linear-gradient(to bottom left, #00ffa6, #000000);
   border-radius: 7px;
   border: 2px solid #00172e;
   left: 90px;
@@ -506,7 +508,7 @@ a.cta {
   height: 460px;
   top: -437px;
   /* background: #024081; */
-  background-image: linear-gradient(to bottom left, #011830, #1861ad);
+  background-image: linear-gradient(to bottom left, #00172e, #2ef69b );
   right: -533px;
   border-radius: 7px;
   border: 2px solid #00172e;
