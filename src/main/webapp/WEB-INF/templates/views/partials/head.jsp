@@ -62,6 +62,10 @@
                     var chopped = path.substring(1);
                     if (chopped === "") { chopped = "home" };
                     $("." + chopped).addClass("selected");
+
+                    if (chopped == 'home'){
+                        $("a.name").css("display", "none");
+                    }
                 });
 
 

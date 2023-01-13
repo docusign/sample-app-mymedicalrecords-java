@@ -492,7 +492,7 @@ a.cta {
   position: relative;
   width: 191px;
   height: 29px;
-  left: 127px;
+  left: 130px;
   top: 40px;
   font-family: Montserrat;
   font-style: normal;
@@ -518,7 +518,7 @@ a.cta {
   position: relative;
   width: 191px;
   height: 29px;
-  left: 125px;
+  left: 122px;
   top: 40px;
   font-family: Montserrat;
   font-style: normal;
@@ -727,7 +727,7 @@ p.financSub {
   }
 
   a.cta {
-    left: 21%;
+    left: 26%;
   }
 
 
