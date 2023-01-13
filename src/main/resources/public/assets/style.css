@@ -5,12 +5,7 @@ body {
 
 }
 
-.pDocTitle {
-
-text-shadow: 2px 0px 1px #001730;
-
-text-align: center ;
-}
+.pDocTitle {text-shadow: 2px 0px 1px #001730;left: 112px;}
 
 a.nav-link {
   color: white;
@@ -492,7 +487,7 @@ a.cta {
   position: relative;
   width: 191px;
   height: 29px;
-  left: 110px;
+  /* left: 116px; */
   top: 40px;
   /* font-family: Montserrat; */
   /* font-style: normal; */
@@ -518,7 +513,7 @@ a.cta {
   position: relative;
   width: 191px;
   height: 29px;
-  left: 102px;
+  /* left: 102px; */
   top: 40px;
   /* font-family: Montserrat; */
   /* font-style: normal; */
