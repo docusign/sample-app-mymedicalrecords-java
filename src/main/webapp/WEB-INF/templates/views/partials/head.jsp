@@ -100,7 +100,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="patientdocs"><i
-                                    class="fa-sharp fa-solid fa-notes-medical"></i>&nbsp;My-Medical-Records<span
+                                    class="fa-sharp fa-solid fa-notes-medical"></i>&nbsp;MyMedicalRecords<span
                                     class="sr-only">(current)</span></a>
                         </li>
                     </ul>
