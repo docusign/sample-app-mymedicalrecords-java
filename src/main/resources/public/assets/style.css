@@ -5,13 +5,13 @@ body {
 
 }
 
-.pDocTitle {text-shadow: 2px 0px 1px #001730;left: 112px;}
+.pDocTitle {left: 112px;}
 
 a.nav-link {
   color: white;
   text-align: center;
   vertical-align: middle;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -21,7 +21,7 @@ a.nav-link {
   left: 220%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  text-shadow: 3px -2px 2px #001730;
+  
 }
 
 
@@ -30,7 +30,7 @@ a.nav-link {
   height: 104px;
   left: 0px;
   margin-top: 10px;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700 !important;
   font-size: 20px;
@@ -66,7 +66,7 @@ a.nav-link {
 .name {
   vertical-align: middle;
   float: right;
-  text-shadow: 3px -2px 2px #001730;
+  
   color: white;
   padding-right: 430px;
   cursor: pointer;
@@ -102,13 +102,13 @@ a.navbar-text.name:hover {
   float: right;
   right: 90px;
   top: 21px;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 20px;
   color: #F9F9F9;
-  text-shadow: 3px -2px 2px #141613;
+  
 
 }
 
@@ -358,14 +358,14 @@ div.arrow img {
   top: 75px;
   background: #33D69D;
   border-radius: 9px;
-  text-shadow: 1px -1px 2px #2125298f;
+  /*  */
   font-weight: 700;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 
 .startbox1 a {
-  color: whitesmoke;
+  color: #1c1c1c;
 }
 
 
@@ -392,7 +392,7 @@ a.done {
     background: #33D69D;
     line-height: 80px;
     border-radius: 9px;
-    text-shadow: 1px -1px 2px #2125298f;
+    
     font-weight: 700;
     border: 2px solid black;
     color: whitesmoke;
@@ -408,18 +408,17 @@ a.cta {
   padding-top: 10px;
   padding-bottom: 10px;
   /* height: 20px; */
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   align-items: center;
-  color: white;
+  color: black;
   padding-right: 1rem;
   border: 3.5px solid #33D69D;
   border-radius: 7px;
   background: #33D69D;
-  text-shadow: 1px -1px 2px #2125298f;
 }
 
 .ctaLeft{
@@ -435,7 +434,7 @@ a.cta {
   }
 
 .footLead {
-  font-family: Montserrat;
+  font-family: 'Roboto';
   font-size: 31pt;
   /* font-weight: 700; */
   line-height: 29px;
@@ -444,11 +443,11 @@ a.cta {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 35px;
-  text-shadow: 1px 1px 0px #696d72;
+  
 }
 
 .footSub {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 18px;
   font-weight: 400;
   line-height: 0px;
@@ -489,7 +488,7 @@ a.cta {
   height: 29px;
   /* left: 116px; */
   top: 40px;
-  /* font-family: Montserrat; */
+  /* font-family: 'Roboto'/
   /* font-style: normal; */
   font-weight: bold;
   font-size: 24px;
@@ -515,7 +514,7 @@ a.cta {
   height: 29px;
   /* left: 102px; */
   top: 40px;
-  /* font-family: Montserrat; */
+  /* font-family: 'Roboto'/
   /* font-style: normal; */
   font-weight: bold;
   font-size: 24px;
@@ -576,7 +575,7 @@ h4.consentLead {
   color: white;
   /* left: -176px; */
   position: relative;
-  text-shadow: 2px -1px 0px #031426;
+  
 }
 
 p.consentSub {
@@ -591,7 +590,7 @@ h4.financLead {
   color: white;
   /* left: -75px; */
   position: relative;
-  text-shadow: 3px 2px 1px #031426;
+  
 }
 
 p.financSub {
@@ -604,7 +603,7 @@ p.financSub {
 
 .liGreen {
   display: inline-block;
-  text-shadow: 2px 0px 1px #001730;
+  
   margin: 0;
 }
 
@@ -636,7 +635,7 @@ p.financSub {
   top: -160px;
   background: #33D69D;
   border-radius: 9px;
-  text-shadow: 1px -1px 2px #f1f1f1;
+  
   font-weight: 700;
   z-index: 3
 }
@@ -652,7 +651,7 @@ p.financSub {
   background: none;
   color: #f1f1f1;
   border: none;
-  text-shadow: 1px 2px 2px #000000;
+  
   font-weight: 700;
   z-index: 1;
 }
@@ -667,7 +666,7 @@ p.financSub {
   top: -219px;
   background: #33D69D;
   border-radius: 9px;
-  text-shadow: 1px -1px 2px #f1f1f1;
+  
   font-weight: 700;
 }
 
