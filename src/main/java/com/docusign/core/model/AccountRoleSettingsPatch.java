@@ -2,7 +2,7 @@ package com.docusign.core.model;
 
 import com.docusign.esign.model.AccountRoleSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 public class AccountRoleSettingsPatch extends AccountRoleSettings {
 
@@ -13,15 +13,9 @@ public class AccountRoleSettingsPatch extends AccountRoleSettings {
         this.signingUiVersion = signingUiVersion;
         return this;
     }
-
-    /**
-     *
-     * @return signingUiVersion
-     **/
-    @ApiModelProperty(example = "null", value = "")
+    @Schema(example = "null")
     public String getSigningUiVersion() {
         return signingUiVersion;
     }
-
 
 }
