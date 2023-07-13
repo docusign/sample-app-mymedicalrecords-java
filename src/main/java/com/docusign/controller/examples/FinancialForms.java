@@ -121,7 +121,7 @@ public class FinancialForms extends AbstractEsignatureController{
 
         SignHere signs = EnvelopeHelpers.createSignHere("*sn2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
         DateSigned dates = EnvelopeHelpers.createDateSigned("*ds2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
-        FullName names = EnvelopeHelpers.createFullName("*nm2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
+        FullName names = EnvelopeHelpers.createFullName("Print Name of Patient", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
         Text texts =EnvelopeHelpers.createText("*txt2", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
     
         Tabs signerTabs = new Tabs();
