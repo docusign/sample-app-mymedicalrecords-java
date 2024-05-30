@@ -152,7 +152,7 @@ public final class EnvelopeHelpers {
     /**
      * Create SignHere (see {@link SignHere}) field (also known as tabs) on the
      * documents using anchor (autoPlace) positioning.
-     * @param anchorString the anchor string; the DocuSign platform searches
+     * @param anchorString the anchor string; the Docusign platform searches
      * throughout your envelope's documents for matching anchor strings
      * @param yOffsetPixels the y offset of anchor in pixels
      * @param xOffsetPixels the x offset of anchor in pixels
@@ -205,7 +205,7 @@ public final class EnvelopeHelpers {
     /**
      * Create Tabs object containing a single SignHere (see {@link SignHere})
      * field (also known as tabs) on the documents using anchor (autoPlace) positioning.
-     * @param anchorString the anchor string; the DocuSign platform searches
+     * @param anchorString the anchor string; the Docusign platform searches
      * throughout your envelope's documents for matching anchor strings
      * @param yOffsetPixels the y offset of anchor in pixels
      * @param xOffsetPixels the x offset of anchor in pixels

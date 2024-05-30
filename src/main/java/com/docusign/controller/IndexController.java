@@ -29,7 +29,7 @@ public class IndexController {
 
     @GetMapping(path = "/ds/mustAuthenticate")
     public ModelAndView mustAuthenticateController(ModelMap model) {
-        // model.addAttribute(ATTR_TITLE, "Authenticate with DocuSign");
+        // model.addAttribute(ATTR_TITLE, "Authenticate with Docusign");
         // return new ModelAndView(getLoginPath());
         return new ModelAndView("redirect:" + getLoginPath());
     }
@@ -53,7 +53,7 @@ public class IndexController {
     public String returnController(@RequestParam(value = ATTR_STATE, required = false) String state,
             @RequestParam(value = ATTR_EVENT, required = false) String event,
             @RequestParam(value = "envelopeId", required = false) String envelopeId, ModelMap model) {
-        model.addAttribute(ATTR_TITLE, "Return from DocuSign");
+        model.addAttribute(ATTR_TITLE, "Return from Docusign");
         model.addAttribute(ATTR_EVENT, event);
         model.addAttribute(ATTR_STATE, state);
         model.addAttribute(ATTR_ENVELOPE_ID, envelopeId);

@@ -9,10 +9,10 @@
 
 
                 <p class="footLead">
-                        DocuSign: It's time to agree better</p>
+                        Docusign: It's time to agree better</p>
 
                         <p class="footSub">
-                        DocuSign helps organizations connect and automate how they prepare, sign, act on and manage agreements.
+                        Docusign helps organizations connect and automate how they prepare, sign, act on and manage agreements.
                 </p>
 
                 <div class="ctaLeft">

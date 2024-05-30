@@ -13,11 +13,11 @@
         </div>
         <pre style="position: absolute; width: 412px; top: 225px; font-family: Roboto; font-style: normal;
         font-weight: normal; font-size: 16px; line-height: 21px; color:whitesmoke; ">
-        <p style="text-align: center; padding-right: 14px; font-weight: 700; color:whitesmoke">DocuSign features:</p> 
+        <p style="text-align: center; padding-right: 14px; font-weight: 700; color:whitesmoke">Docusign features:</p>
             <li class="liGreen">Responsive Signing (SMS Delivery)</li>
             <li class="liGreen">Templates</li>
-            
-            
+
+
     </pre>
     </div>
 
@@ -36,7 +36,7 @@
 
         <pre style="position: absolute; width: 412px; left: 25px; top: 225px; font-family: Roboto; font-style: normal;
         font-weight: normal; font-size: 16px; line-height: 21px; color:whitesmoke;">
-        <p style="text-align: center; padding-right: 50px;font-weight:700; color:whitesmoke">DocuSign features: </p>
+        <p style="text-align: center; padding-right: 50px;font-weight:700; color:whitesmoke">Docusign features: </p>
         <li class="liGreen">Embedded Signing (recipient view)</li>
         <li class="liGreen">Templates</li>
     </pre>

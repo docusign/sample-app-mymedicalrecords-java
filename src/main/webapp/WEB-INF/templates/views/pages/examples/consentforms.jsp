@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label for="signerName" style="color: white;">Signer Name</label>
-                        <input type="text" class="form-control" id="signerName" 
+                        <input type="text" class="form-control" id="signerName"
                             name="signerName"  required />
                     </div>
                     <div class="form-group">
@@ -85,7 +85,7 @@
 
 
 
-<h4>Step 1</h4>   
+<h4>Step 1</h4>
 
 <p>We have the patient fill out this form with their contact information.  With this information, we'll generate an envelope definition.</p>
 
@@ -96,13 +96,13 @@
 <p>We then use the phone numbers provided to add additional SMS notifications. </p>
 
 
-<h4>Step 3</h4>  
+<h4>Step 3</h4>
 
 <p>To complete our envelope definition, we'll need to specify the email subject line, set the recipients (as an Array list, per API specifications) and to set the Documents. Finally, we'll set the status to 'sent' to send the envelope.</p>
 
 
-<h4>Step 4</h4>  
+<h4>Step 4</h4>
 
-<p>To send an envelope through the DocuSign eSignature REST API, we'll need the account ID of the user and an access token, which was generated earlier. From there, we'll pass along the envelope to the <a href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" style="color:#00BAA1;" target="_blank" >Envelopes:create</a> method.</p>
+<p>To send an envelope through the Docusign eSignature REST API, we'll need the account ID of the user and an access token, which was generated earlier. From there, we'll pass along the envelope to the <a href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" style="color:#00BAA1;" target="_blank" >Envelopes:create</a> method.</p>
 
         </div>
