@@ -64,7 +64,7 @@ public class FinancialForms extends AbstractEsignatureController{
         //Creates the envelope definition
         EnvelopeDefinition envelope = makeEnvelope(signerEmail, signerName);
 
-        //Call DocuSign to create the envelope
+        //Call Docusign to create the envelope
         ApiClient apiClient = createApiClient(session.getBasePath() + "/restapi", user.getAccessToken());
         EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
         EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envelope);
@@ -89,13 +89,13 @@ public class FinancialForms extends AbstractEsignatureController{
         // should typically be a callback route somewhere in your app.
         // The query parameter is included as an example of how
         // to save/recover state information during the redirect to
-        // the DocuSign signing. It's usually better to use
+        // the Docusign signing. It's usually better to use
         // the session mechanism of your web framework. Query parameters
         // can be changed/spoofed very easily.
         viewRequest.setReturnUrl(config.getDsReturnUrl() + "?state=123");
 
         // How has your app authenticated the user? In addition to your app's
-        // authentication, you can include authenticate steps from DocuSign.
+        // authentication, you can include authenticate steps from Docusign.
         // Eg, SMS authentication
         viewRequest.setAuthenticationMethod("none");
 
@@ -105,11 +105,11 @@ public class FinancialForms extends AbstractEsignatureController{
         viewRequest.setUserName(signerName);
         viewRequest.setClientUserId(SIGNER_CLIENT_ID);
 
-        // DocuSign recommends that you redirect to DocuSign for the
+        // Docusign recommends that you redirect to Docusign for the
         // embedded signing. There are multiple ways to save state.
         // To maintain your application's session, use the pingUrl
-        // parameter. It causes the DocuSign signing web page
-        // (not the DocuSign server) to send pings via AJAX to your app.
+        // parameter. It causes the Docusign signing web page
+        // (not the Docusign server) to send pings via AJAX to your app.
         // NOTE: The pings will only be sent if the pingUrl is an https address
         viewRequest.setPingFrequency("600"); // seconds
         viewRequest.setPingUrl(config.getDsPingUrl());
@@ -123,7 +123,7 @@ public class FinancialForms extends AbstractEsignatureController{
         DateSigned dates = EnvelopeHelpers.createDateSigned("*ds2*", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
         FullName names = EnvelopeHelpers.createFullName("Print Name of Patient", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
         Text texts =EnvelopeHelpers.createText("*txt2", ANCHOR_OFFSET_Y, ANCHOR_OFFSET_X);
-    
+
         Tabs signerTabs = new Tabs();
         signerTabs.setSignHereTabs(Arrays.asList(signs));
         signerTabs.setTextTabs(Arrays.asList(texts));

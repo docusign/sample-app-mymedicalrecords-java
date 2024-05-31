@@ -12,14 +12,14 @@
 
             <title>${title}</title>
             <meta name="description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the DocuSign API to enable you to integrate DocuSign functionality into your own applications." />
+                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
             <meta name="twitter:title" content="MyMedicalRecords Sample Application" />
             <meta name="twitter:description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the DocuSign API to enable you to integrate DocuSign functionality into your own applications." />
+                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
             <meta property="og:type" content="article" />
             <meta property="og:title" content="MyMedicalRecords Sample Application" />
             <meta property="og:description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the DocuSign API to enable you to integrate DocuSign functionality into your own applications." />
+                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
             <meta property="og:image" content="assets/MyHealthcare_OG.png" />
 
 

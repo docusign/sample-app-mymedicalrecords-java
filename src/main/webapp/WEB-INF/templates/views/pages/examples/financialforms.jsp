@@ -23,23 +23,23 @@
     <button type="submit" class="btn btn-docu">Submit</button>
 </form>
 </div>
-</div> 
+</div>
 <div class="col-md-6">
 
-    <a href="#" class="showmore" onclick=expander()>Behind the scenes</a> 
+    <a href="#" class="showmore" onclick=expander()>Behind the scenes</a>
     <div class="showArrow"  onclick=expander()></div>
     <div class="behindScenes">
 
 
 
             <h4>This sample features:</h4>
-            
+
             <ul>
             <li>Embedded Signing</li>
             <li>Date Signed Tabs</li>
             </ul>
-   
-            
+
+
 
 <h4>Code Flow:</h4>
 
@@ -47,25 +47,25 @@
 <p>View source file <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">FinancialForms.java</a> on GitHub.
 
 
-<h4>Step 1</h4>   
+<h4>Step 1</h4>
 
 
 
 <p>First, we generate the envelope definition using the provided email address and name.</p>
 
-<h4>Step 2</h4>   
+<h4>Step 2</h4>
 
 
 
-<p>Next, we'll send the envelope to DocuSign via the <a style="color:#00BAA1;" target="_blank" href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" target="_blank">Envelopes:create</a> method to retrieve the Envelope ID.</p>
+<p>Next, we'll send the envelope to Docusign via the <a style="color:#00BAA1;" target="_blank" href="https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/" target="_blank">Envelopes:create</a> method to retrieve the Envelope ID.</p>
 
 
-<h4>Step 3</h4>   
+<h4>Step 3</h4>
 
 
 
 
-<p>Finally, we'll create a recipient and a redirect URL that we can use to embed the DocuSign envelope into our application. </p>
+<p>Finally, we'll create a recipient and a redirect URL that we can use to embed the Docusign envelope into our application. </p>
 
-    
+
 </div>

@@ -15,7 +15,7 @@ After your new example has been accepted, the DevCenter team will
 arrange to have it ported to the other SDK examples.
 
 ### New examples should be not too big, and not too small
-Each example should cover a DocuSign feature "appropriately."
+Each example should cover a Docusign feature "appropriately."
 
 For example, if a feature offers two options then consider
 having your example demonstrate both options.

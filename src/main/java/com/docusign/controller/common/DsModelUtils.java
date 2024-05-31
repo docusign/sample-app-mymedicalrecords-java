@@ -5,7 +5,7 @@ import com.docusign.esign.model.SettingsMetadata;
 
 
 /**
- * Helper functions to create and modify objects provided by the DocuSign API.
+ * Helper functions to create and modify objects provided by the Docusign API.
  */
 public final class DsModelUtils {
 

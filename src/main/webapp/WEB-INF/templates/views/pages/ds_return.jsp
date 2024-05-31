@@ -11,7 +11,7 @@
         <h2 style="text-shadow: 3px -2px 2px #001730;">Signing Complete!</h2>
 <br><br>
 
-        <p>You have signed the document. The document will be securely stored on the DocuSign, Inc. servers.</p>
+        <p>You have signed the document. The document will be securely stored on the Docusign, Inc. servers.</p>
     </c:when>
     <c:otherwise>
         <h2 style="text-shadow: 3px -2px 2px #001730;">Successfully sent request!</h2>
@@ -24,12 +24,12 @@
 
 <p><a style="color:whitesmoke; font-weight: 700;" href="/patientdocs">Back to Home</a></p>
 
-<p class="font-weight:500">Get Started with the DocuSign APIs Today</p>
+<p class="font-weight:500">Get Started with the Docusign APIs Today</p>
 
 <a href="https://go.docusign.com/o/sandbox/" target="_blank" class="done"><span style="text-align:center">
     Create&nbsp;Developer&nbsp;Account
 </span></a>
 
-<p class="font-weight:500">With a developer account, you can test our APIs for free. Developer accounts do not expire and have enterprise-level features enabled.</p> 
+<p class="font-weight:500">With a developer account, you can test our APIs for free. Developer accounts do not expire and have enterprise-level features enabled.</p>
 
 </div>

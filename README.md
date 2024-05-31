@@ -1,5 +1,5 @@
-# Introduction 
-MyMedicalRecords is a sample app showcasing integration between the DocuSign eSignature REST API and an Electronic Medical Records System. Each scenario in the sample app illustrates a different use case, such as creating and sending an envelope through SMS messaging and embedded signing of a templated form and consists of a series of API calls. 
+# Introduction
+MyMedicalRecords is a sample app showcasing integration between the Docusign eSignature REST API and an Electronic Medical Records System. Each scenario in the sample app illustrates a different use case, such as creating and sending an envelope through SMS messaging and embedded signing of a templated form and consists of a series of API calls.
 
 
 # Hosted instance
