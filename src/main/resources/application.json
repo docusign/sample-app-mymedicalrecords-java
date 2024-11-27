@@ -1,24 +1,26 @@
 {
-  "quickstart" :"false",
-  "DS_SIGNER_NAME": "medical records user",
-  "DS_SIGNER_EMAIL": "DS@DSEMAIL.COM",
+  "quickstart" :"{QUICKSTART_VALUE}",
+  "DS_SIGNER_NAME": "{SIGNER_NAME}",
+  "DS_SIGNER_EMAIL": "{SIGNER_EMAIL}",
   "DS_APP_URL": "http://localhost:8080",
-  "DS_TARGET_ACCOUNT_ID": "{IMPERSONATED_USER_GUID}",
+  "DS_TARGET_ACCOUNT_ID": "3da38cbc-480e-4fbb-a561-66aef59b46fc",
   "DS_API_NAME": "ESIGNATURE",
   "DS_BASE_PATH": "https://demo.docusign.net",
-  
- 
-  "Gateway_Name": "{DS_PAYMENT_GATEWAY_NAME}",
-  "Gateway_Account_Id": "{GATEWAY_ACCOUNT_ID}",
-  "Gateway_Display_Name": "{DS_PAYMENT_GATEWAY_DISPLAY_NAME}",
+  "DS_ROOMS_BASE_PATH": "https://demo.rooms.docusign.com",
+  "DS_CLICK_BASE_PATH": "https://demo.docusign.net",
+  "DS_MONITOR_BASE_PATH": "https://lens-d.docusign.net",
+
+  "Gateway_Name": "Stripe_3758",
+  "Gateway_Account_Id": "8e0c89fd-ff6f-4bbf-98fc-95e10596e120",
+  "Gateway_Display_Name": "Stripe_3758",
 
 
   "jwt.grant.sso.redirect-url": "&type=jwt",
   "jwt.grant.client.scope": "signature impersonation",
   "jwt.grant.client.base-url": "account-d.docusign.com",
-  "jwt.grant.client.client-id": "{JWT_INTEGRATION_KEY}",
+  "jwt.grant.client.client-id": "83567dd3-34a3-4545-92c9-e1ed8cde9f56",
   "jwt.grant.client.private-key-path": "src/main/resources/private.key",
-  "jwt.grant.client.impersonated-user-guid": "{JWT_IMPERSONATED_USER_GUID}",
+  "jwt.grant.client.impersonated-user-guid": "3da38cbc-480e-4fbb-a561-66aef59b46fc",
 
   "common.client.resource.user-info-uri": "https://account-d.docusign.com/oauth/userinfo",
   "com.docusign.github.example-uri": "https://github.com/docusign/code-examples-java/blob/master/src/main/java/",
