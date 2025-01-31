@@ -67,9 +67,3 @@
     </div>
   </div>
 </div>
-
-
-
-    <p class="bottomCopy" style="text-align:center">&#169;
-      <c:out value="${currentYear}" /> Docusign Inc.
-    </p>
