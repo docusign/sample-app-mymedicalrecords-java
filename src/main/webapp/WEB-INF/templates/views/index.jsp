@@ -23,7 +23,7 @@
       <div class="logo"></div>
 
       <div class="hero-banner">
-        <p class="hero">MyMedicalRecords Sample Application</p>
+        <p class="hero">EMR Sample App</p>
         <p class="tagline">This is a sample application showcasing an integration between the Docusign eSignature REST API and an Electronic Medical Records system. This application is open source and all of the code is located in our GitHub repository.</p>
       </div>
 
@@ -31,7 +31,7 @@
 
     <div class="buttonGroup">
       <button type="button" class="tryIt" onclick="window.location.href='/patientdocs'"> Try the App </button>
-      <button type="button" class="tryItSrc"  onclick=" window.open('http://github.com/docusign/sample-app-mymedicalrecords-java','_blank')"> More Info</button>
+      <button type="button" class="tryItSrc"  onclick=" window.open('http://github.com/docusign/sample-app-emr-java','_blank')"> More Info</button>
     </div>
 
 

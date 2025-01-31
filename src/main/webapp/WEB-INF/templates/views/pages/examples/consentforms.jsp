@@ -79,7 +79,7 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source files <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">ConsentForms.java</a> and <a style="color:#00BAA1;" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java" target="_blank" >EnvelopeHelpers.java</a> on GitHub.
+<p>View source files <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-emr-java/blob/master/src/main/java/com/docusign/controller/examples/ConsentForms.java">ConsentForms.java</a> and <a style="color:#00BAA1;" href="https://github.com/docusign/sample-app-emr-java/blob/master/src/main/java/com/docusign/controller/common/ds/EnvelopeHelpers.java" target="_blank" >EnvelopeHelpers.java</a> on GitHub.
 
 
 

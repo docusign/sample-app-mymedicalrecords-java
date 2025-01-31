@@ -12,15 +12,15 @@
 
             <title>${title}</title>
             <meta name="description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
-            <meta name="twitter:title" content="MyMedicalRecords Sample Application" />
+                content="See how the EMR Sample App for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
+            <meta name="twitter:title" content="EMR Sample App" />
             <meta name="twitter:description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
+                content="See how the EMR Sample App for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content="MyMedicalRecords Sample Application" />
+            <meta property="og:title" content="EMR Sample App" />
             <meta property="og:description"
-                content="See how the MyMedicalRecords sample application for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
-            <meta property="og:image" content="assets/MyHealthcare_OG.png" />
+                content="See how the EMR Sample App for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
+            <meta property="og:image" content="assets/EMR-Sample-App-OG-Image.jpg" />
 
 
             <!--JQuery Library-->
@@ -106,7 +106,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="patientdocs"><i
-                                    class="fa-sharp fa-solid fa-notes-medical"></i>&nbsp;MyMedicalRecords<span
+                                    class="fa-sharp fa-solid fa-notes-medical"></i>&nbsp;EMR Sample App<span
                                     class="sr-only">(current)</span></a>
                         </li>
                     </ul>
@@ -115,7 +115,7 @@
                 </div>
                 <c:if test="${locals.user != null}">
                     <a class="navbar-text name" target="_BLANK"
-                        href="https:\/\/github.com/docusign/sample-app-mymedicalrecords-java">
+                        href="https:\/\/github.com/docusign/sample-app-emr-java">
                         GitHub Source
                     </a>
                 </c:if>
