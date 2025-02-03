@@ -16,7 +16,7 @@
 <p><em>Dump: </em><span style="color:#00BAA1;">${done.stackTrace}</span></p>
 
 
-<p>Please check your account configuration. If you are unable to resolve the problem, <a href="https://github.com/docusign/sample-app-mymedicalrecords-java/issues/new" target="_blank" rel="nofollow noopener noreferrer">open a new issue on GitHub</a>.</p>
+<p>Please check your account configuration. If you are unable to resolve the problem, <a href="https://github.com/docusign/sample-app-emr-java/issues/new" target="_blank" rel="nofollow noopener noreferrer">open a new issue on GitHub</a>.</p>
 
 
 <p><a class="startBox" href="/">Continue</a></p>

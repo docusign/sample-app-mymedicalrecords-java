@@ -6,15 +6,6 @@
         </content>
         </div>
         <div class="footer">
-
-
-                <p class="footLead">
-                        Docusign: It's time to agree better</p>
-
-                        <p class="footSub">
-                        Docusign helps organizations connect and automate how they prepare, sign, act on and manage agreements.
-                </p>
-
                 <div class="ctaLeft">
                 <a href="https://go.docusign.com/o/sandbox/" target="_blank" class="cta"><span style="text-align:center">
                         Create&nbsp;Developer&nbsp;Account

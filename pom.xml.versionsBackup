@@ -14,7 +14,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>MyMedicalRecords Sample App</name>
+    <name>EMR Sample App</name>
 
     <properties>
         <java.version>15</java.version>

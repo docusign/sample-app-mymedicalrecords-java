@@ -44,7 +44,7 @@
 <h4>Code Flow:</h4>
 
 
-<p>View source file <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-mymedicalrecords-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">FinancialForms.java</a> on GitHub.
+<p>View source file <a style="color:#00BAA1;" target="_blank" href="https://github.com/docusign/sample-app-emr-java/blob/master/src/main/java/com/docusign/controller/examples/FinancialForms.java">FinancialForms.java</a> on GitHub.
 
 
 <h4>Step 1</h4>
