@@ -20,7 +20,7 @@
             <meta property="og:title" content="EMR Sample App" />
             <meta property="og:description"
                 content="See how the EMR Sample App for the healthcare industry showcases the capabilities of the Docusign API to enable you to integrate Docusign functionality into your own applications." />
-            <meta property="og:image" content="assets/EMR-Sample-App-OG-Image.jpg" />
+            <meta property="og:image" content="/assets/EMR-Sample-App-OG-Image.jpg" />
 
 
             <!--JQuery Library-->
